@@ -16,5 +16,9 @@ public class TrieDriver {
         System.out.println(trie.search("be"));
         System.out.println(trie.search("cdol"));
 
+        System.out.println(trie.automcompleteOrStartsWith("a"));
+        System.out.println(trie.automcompleteOrStartsWith("app"));
+        System.out.println(trie.automcompleteOrStartsWith("dpp"));
+
     }
 }

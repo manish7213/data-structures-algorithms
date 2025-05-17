@@ -1,5 +1,8 @@
 package Tries;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Trie {
 
     private Node root;
@@ -41,6 +44,39 @@ public class Trie {
             return false;
         }
         return true;
+    }
+
+    public List<String> automcompleteOrStartsWith(String prefix) {
+        Node tempNode = root;
+        List<String> autocompleteResults = new ArrayList<>();
+        for (int i = 0; i < prefix.length(); i++) {
+            char ch = prefix.charAt(i);
+            int asciiIndex = ch - 'a';
+
+            if (tempNode.getChild(asciiIndex) == null) {
+                return autocompleteResults; // empty list
+            }
+
+            tempNode = tempNode.getChild(asciiIndex);
+        }
+        collectAutoCompletedWords(tempNode, prefix, autocompleteResults);
+        return autocompleteResults;
+    }
+
+    private void collectAutoCompletedWords(Node node, String prefix, List<String> list) {
+        if (node == null) {
+            return;
+        }
+        if (node.isLeaf()) {
+            list.add(prefix);
+        }
+        for (Node childNode : node.getChildren()) {
+            if (childNode != null) {
+                String childCharacter = childNode.getCharacter();
+                // Recursion, We can use StringBuilder instead of + operator.
+                collectAutoCompletedWords(childNode, prefix + childCharacter, list);
+            }
+        }
     }
 
 

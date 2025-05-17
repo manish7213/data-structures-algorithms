@@ -14,9 +14,24 @@ public class Node {
         children = new Node[ALPHABET_SIZE];
     }
 
+    public Node[] getChildren() {
+        return children;
+    }
+
+    public String getCharacter() {
+        return character;
+    }
+
+    public void setChildren(Node[] children) {
+        this.children = children;
+    }
 
     public boolean isLeaf() {
         return leaf;
+    }
+
+    public void setLeaf(boolean leaf) {
+        this.leaf = leaf;
     }
 
     @Override
@@ -34,7 +49,5 @@ public class Node {
         children[index] = newNode;
     }
 
-    public void setLeaf(boolean leaf) {
-        this.leaf = leaf;
-    }
+
 }

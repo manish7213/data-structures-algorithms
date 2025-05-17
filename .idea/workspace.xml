@@ -4,27 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f05e0f55-14bd-4979-a6b3-bf95962ba4fd" name="Changes" comment="dfs and bfs">
-      <change afterPath="$PROJECT_DIR$/Tries/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tries/Trie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tries/TrieDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphs/NumberOfProvince_LC_547.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/4/344e1eb30e8c0a9c22ce63202beb580ce26c9598" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/a/da0ec7a00c931f0e5a6acc8de63af4c484708391" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/a/da0ec7a00c931f0e5a6acc8de63af4c484708391" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/4/344e1eb30e8c0a9c22ce63202beb580ce26c9598" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphs/BFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/data-structures-algorithms/.idea/sonarlint/issuestore/0/3/0330701f0dbb6c3f255b96118b46e5e79a020e06" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/data-structures-algorithms/.idea/sonarlint/issuestore/0/3/0330701f0dbb6c3f255b96118b46e5e79a020e06" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/data-structures-algorithms/.idea/sonarlint/issuestore/3/4/344e1eb30e8c0a9c22ce63202beb580ce26c9598" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/data-structures-algorithms/.idea/sonarlint/issuestore/9/9/9971f577d120f1a3c877e81313745f3632b1c5ca" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/data-structures-algorithms/.idea/sonarlint/issuestore/9/9/9971f577d120f1a3c877e81313745f3632b1c5ca" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/data-structures-algorithms/.idea/sonarlint/issuestore/d/a/da0ec7a00c931f0e5a6acc8de63af4c484708391" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/data-structures-algorithms/.idea/sonarlint/issuestore/d/a/da0ec7a00c931f0e5a6acc8de63af4c484708391" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/data-structures-algorithms/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/data-structures-algorithms/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/data-structures-algorithms/.idea/sonarlint/securityhotspotstore/3/4/344e1eb30e8c0a9c22ce63202beb580ce26c9598" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/data-structures-algorithms/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/data-structures-algorithms/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/data-structures-algorithms/graphs/BFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/data-structures-algorithms/graphs/BFS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/data-structures-algorithms/graphs/DFS.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/data-structures-algorithms/graphs/DFS.class" afterDir="false" />
+    <list default="true" id="f05e0f55-14bd-4979-a6b3-bf95962ba4fd" name="Changes" comment="Trie">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1adade82f1df6c224cf4646c22b0b3647908d33" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1adade82f1df6c224cf4646c22b0b3647908d33" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/5/b5216d8976aebe3fd17818411b479aa7c879e553" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/5/b5216d8976aebe3fd17818411b479aa7c879e553" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ff5c4d86806546fd694dfdb1452b322c2fe82b7c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ff5c4d86806546fd694dfdb1452b322c2fe82b7c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tries/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tries/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tries/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tries/Trie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tries/TrieDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tries/TrieDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/data-structures-algorithms/Tries/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/data-structures-algorithms/Tries/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/data-structures-algorithms/Tries/Trie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/data-structures-algorithms/Tries/Trie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/data-structures-algorithms/Tries/TrieDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/data-structures-algorithms/Tries/TrieDriver.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,12 +134,37 @@
       <option name="project" value="LOCAL" />
       <updated>1744569687341</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Trie">
+      <option name="closed" value="true" />
+      <created>1747491557480</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747491557480</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Trie">
+      <option name="closed" value="true" />
+      <created>1747491565119</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747491565119</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Trie">
+      <option name="closed" value="true" />
+      <created>1747491568235</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747491568235</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="dfs and bfs" />
-    <option name="LAST_COMMIT_MESSAGE" value="dfs and bfs" />
+    <MESSAGE value="Trie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trie" />
   </component>
 </project>
