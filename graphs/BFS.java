@@ -8,10 +8,9 @@ import java.util.Queue;
 public class BFS {
 
     private static List<Integer> bfs(int v, List<List<Integer>> adjList) {
-        var visited = new boolean[adjList.size() + 1];
-        var bfsResult = new ArrayList<Integer>();
-
+        boolean[] visited = new boolean[adjList.size() + 1];
         Queue<Integer> queue = new LinkedList<>();
+        List<Integer> bfsResult = new ArrayList<>();
         queue.add(0);
         visited[0] = true;
         bfsResult.add(0);
