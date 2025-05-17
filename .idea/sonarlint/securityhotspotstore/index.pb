@@ -137,3 +137,6 @@ w
 G.idea/sonarlint/issuestore/e/1/e18eeab28545f1d6b9444f5c8d876e2c28de5874,c/c/cc4850db4834d7c2336144b1c43f412c8ae47eb3
 w
 G.idea/sonarlint/issuestore/e/6/e61eb5ab825f3698b16a4622787ce9345d046f14,c/2/c21c267ed0e8ac65aa7e6c296466e6de95c6a841
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
