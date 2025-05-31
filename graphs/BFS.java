@@ -1,5 +1,5 @@
 package graphs;
-// This is write
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.Queue;
 
 public class BFS {
 
-    private static List<Integer> bfs(int v, List<List<Integer>> adjList) {
+    private List<Integer> bfsTraversal(List<List<Integer>> adjList) {
         boolean[] visited = new boolean[adjList.size() + 1];
         Queue<Integer> queue = new LinkedList<>();
         List<Integer> bfsResult = new ArrayList<>();
@@ -30,9 +30,25 @@ public class BFS {
     }
 
     public static void main(String[] args) {
-        List<List<Integer>> adjList = Graph.getAdjList();
-        List<Integer> bfs = bfs(0, adjList);
-        Graph.printGraph(adjList);
-        System.out.println("BFS Output is : " + bfs);
+        BFS bfs = new BFS();
+        int V = 4;
+        List<List<Integer>> adjList = new ArrayList<>(V);
+
+        for (int i = 0; i < V; i++)
+            adjList.add(new ArrayList<>());
+
+
+        Graph.addEdge(adjList, 0, 1);
+        Graph.addEdge(adjList, 0, 2);
+        Graph.addEdge(adjList, 1, 2);
+        Graph.addEdge(adjList, 2, 0);
+        Graph.addEdge(adjList, 2, 3);
+        Graph.addEdge(adjList, 3, 3);
+
+        List<Integer> resultNodes = bfs.bfsTraversal(adjList);
+        System.out.println(resultNodes);
+
+
     }
+
 }

@@ -5,26 +5,8 @@ import java.util.*;
 
 public class Graph {
 
-    public static void main(String[] args) {
-        int V = 4;
-        List<List<Integer>> adjList = new ArrayList<>(V);
 
-        for (int i = 0; i < V; i++)
-            adjList.add(new ArrayList<>());
-
-
-        addEdge(adjList, 0, 1);
-        addEdge(adjList, 0, 2);
-        addEdge(adjList, 1, 2);
-        addEdge(adjList, 2, 0);
-        addEdge(adjList, 2, 3);
-        addEdge(adjList, 3, 3);
-
-        printGraph(adjList);
-    }
-
-
-    private static void addEdge(List<List<Integer>> adjList, int source, int destination) {
+    public static void addEdge(List<List<Integer>> adjList, int source, int destination) {
         adjList.get(source).add(destination);
         adjList.get(destination).add(source);
     }
@@ -40,20 +22,4 @@ public class Graph {
         }
     }
 
-    public static List<List<Integer>> getAdjList() {
-        int V = 4;
-        List<List<Integer>> adjList = new ArrayList<>(V);
-
-        for (int i = 0; i < V; i++)
-            adjList.add(new ArrayList<>());
-
-
-        addEdge(adjList, 0, 1);
-        addEdge(adjList, 0, 2);
-        addEdge(adjList, 1, 2);
-        addEdge(adjList, 2, 0);
-        addEdge(adjList, 2, 3);
-        addEdge(adjList, 3, 3);
-        return adjList;
-    }
 }
