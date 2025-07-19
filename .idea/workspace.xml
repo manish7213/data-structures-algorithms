@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f05e0f55-14bd-4979-a6b3-bf95962ba4fd" name="Changes" comment="Trie">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/0330701f0dbb6c3f255b96118b46e5e79a020e06" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/0330701f0dbb6c3f255b96118b46e5e79a020e06" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/9971f577d120f1a3c877e81313745f3632b1c5ca" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/9971f577d120f1a3c877e81313745f3632b1c5ca" afterDir="false" />
+    <list default="true" id="f05e0f55-14bd-4979-a6b3-bf95962ba4fd" name="Changes" comment="Graph">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphs/BFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphs/DFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/graphs/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs/NumberOfProvince_LC_547.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747509023044</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Graph">
+      <option name="closed" value="true" />
+      <created>1748720249532</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1748720249532</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -272,6 +276,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="dfs and bfs" />
     <MESSAGE value="Trie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trie" />
+    <MESSAGE value="Graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="Graph" />
   </component>
 </project>

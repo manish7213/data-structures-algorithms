@@ -8,7 +8,7 @@ import java.util.Queue;
 public class BFS {
 
     private List<Integer> bfsTraversal(List<List<Integer>> adjList) {
-        boolean[] visited = new boolean[adjList.size() + 1];
+        boolean[] visited = new boolean[adjList.size()];
         Queue<Integer> queue = new LinkedList<>();
         List<Integer> bfsResult = new ArrayList<>();
         queue.add(0);
