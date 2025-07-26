@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f05e0f55-14bd-4979-a6b3-bf95962ba4fd" name="Changes" comment="Graph">
+      <change afterPath="$PROJECT_DIR$/Graphs/NoOfProvince_LC_547.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs/NumberOfProvince_LC_547.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/Graphs/BFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/Graphs/DFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/Graphs/Graph.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +46,7 @@
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "Application.BFS.executor": "Run",
     "Application.DFS.executor": "Run",
+    "Application.Solution.executor": "Run",
     "Application.Test.executor": "Run",
     "Application.TrieDriver.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -57,13 +61,13 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.BFS">
+  <component name="RunManager" selected="Application.Solution">
     <configuration name="BFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="graphs.BFS" />
+      <option name="MAIN_CLASS_NAME" value="Graphs.BFS" />
       <module name="data-structures-algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="graphs.*" />
+          <option name="PATTERN" value="Graphs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,11 +76,24 @@
       </method>
     </configuration>
     <configuration name="DFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="graphs.DFS" />
+      <option name="MAIN_CLASS_NAME" value="Graphs.DFS" />
       <module name="data-structures-algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="graphs.*" />
+          <option name="PATTERN" value="Graphs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dp.Solution" />
+      <module name="data-structures-algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DP.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,7 +106,7 @@
       <module name="data-structures-algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="graphs.*" />
+          <option name="PATTERN" value="Graphs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,6 +129,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution" />
         <item itemvalue="Application.BFS" />
         <item itemvalue="Application.DFS" />
         <item itemvalue="Application.TrieDriver" />
@@ -231,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748720249532</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Graph">
+      <option name="closed" value="true" />
+      <created>1752950737044</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1752950737044</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
