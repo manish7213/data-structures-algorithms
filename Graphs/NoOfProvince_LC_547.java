@@ -19,13 +19,31 @@ package Graphs;
  *
  *
  */
-//public class NoOfProvince_LC_547 {
-//    public int findCircleNum(int[][] isConnected) {
-//        for (int i = 0; i < isConnected.length; i++) {
-//            for (int j = 0; j < isConnected.length; j++) {
-//
-//            }
-//        }
-//
-//    }
-//}
+public class NoOfProvince_LC_547 {
+    public int findCircleNum(int[][] isConnected) {
+        int n = isConnected.length;
+        int numberOfProvinces = 0;
+        boolean[] visited = new boolean[n];
+        for (int i = 0; i < n; i++) {
+            if (!visited[i]) {
+                numberOfProvinces++;
+                dfs(isConnected,visited, i);
+            }
+        }
+        return numberOfProvinces;
+    }
+
+    private void dfs(int[][] isConnected, boolean[] visited, int nodeIndex) {
+        visited[nodeIndex] = true;
+        for(int i = 0 ; i < isConnected.length ; i++) {
+            if(isConnected[nodeIndex][i] == 1 && !visited[i]) {
+                dfs(isConnected,visited, i);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[][] isConnected = {{1, 1, 0}, {1, 1, 0}, {0, 0, 1}};
+        System.out.println(new NoOfProvince_LC_547().findCircleNum(isConnected));
+    }
+}

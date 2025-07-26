@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f05e0f55-14bd-4979-a6b3-bf95962ba4fd" name="Changes" comment="Graph">
-      <change afterPath="$PROJECT_DIR$/Graphs/NoOfProvince_LC_547.java" afterDir="false" />
+    <list default="true" id="f05e0f55-14bd-4979-a6b3-bf95962ba4fd" name="Changes" comment="changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs/BFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/Graphs/BFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/Graphs/DFS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/Graphs/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graphs/NoOfProvince_LC_547.java" beforeDir="false" afterPath="$PROJECT_DIR$/Graphs/NoOfProvince_LC_547.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +43,7 @@
     "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "Application.BFS.executor": "Run",
     "Application.DFS.executor": "Run",
+    "Application.NoOfProvince_LC_547.executor": "Run",
     "Application.Solution.executor": "Run",
     "Application.Test.executor": "Run",
     "Application.TrieDriver.executor": "Run",
@@ -61,7 +59,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Solution">
+  <component name="RunManager" selected="Application.NoOfProvince_LC_547">
     <configuration name="BFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Graphs.BFS" />
       <module name="data-structures-algorithms" />
@@ -88,12 +86,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dp.Solution" />
+    <configuration name="NoOfProvince_LC_547" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Graphs.NoOfProvince_LC_547" />
       <module name="data-structures-algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DP.*" />
+          <option name="PATTERN" value="Graphs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,12 +99,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Graphs.Test" />
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dp.Solution" />
       <module name="data-structures-algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Graphs.*" />
+          <option name="PATTERN" value="DP.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NoOfProvince_LC_547" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.BFS" />
         <item itemvalue="Application.DFS" />
         <item itemvalue="Application.TrieDriver" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752950737044</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="changes">
+      <option name="closed" value="true" />
+      <created>1753547710847</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1753547710847</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -303,6 +309,7 @@
     <MESSAGE value="dfs and bfs" />
     <MESSAGE value="Trie" />
     <MESSAGE value="Graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="Graph" />
+    <MESSAGE value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes" />
   </component>
 </project>
