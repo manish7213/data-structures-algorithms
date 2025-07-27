@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f05e0f55-14bd-4979-a6b3-bf95962ba4fd" name="Changes" comment="changes">
+      <change afterPath="$PROJECT_DIR$/Graphs/NumberOfConnectedComponents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graphs/NoOfProvince_LC_547.java" beforeDir="false" afterPath="$PROJECT_DIR$/Graphs/NoOfProvince_LC_547.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +44,7 @@
     "Application.BFS.executor": "Run",
     "Application.DFS.executor": "Run",
     "Application.NoOfProvince_LC_547.executor": "Run",
+    "Application.NumberOfConnectedComponents.executor": "Run",
     "Application.Solution.executor": "Run",
     "Application.Test.executor": "Run",
     "Application.TrieDriver.executor": "Run",
@@ -59,7 +60,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.NoOfProvince_LC_547">
+  <component name="RunManager" selected="Application.NumberOfConnectedComponents">
     <configuration name="BFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Graphs.BFS" />
       <module name="data-structures-algorithms" />
@@ -99,6 +100,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NumberOfConnectedComponents" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Graphs.NumberOfConnectedComponents" />
+      <module name="data-structures-algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Graphs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dp.Solution" />
       <module name="data-structures-algorithms" />
@@ -112,26 +126,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrieDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Tries.TrieDriver" />
-      <module name="data-structures-algorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tries.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NumberOfConnectedComponents" />
         <item itemvalue="Application.NoOfProvince_LC_547" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.BFS" />
         <item itemvalue="Application.DFS" />
-        <item itemvalue="Application.TrieDriver" />
       </list>
     </recent_temporary>
   </component>
@@ -263,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753547710847</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="changes">
+      <option name="closed" value="true" />
+      <created>1753552222194</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1753552222194</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
