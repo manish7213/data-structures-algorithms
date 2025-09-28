@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f05e0f55-14bd-4979-a6b3-bf95962ba4fd" name="Changes" comment="changes">
-      <change afterPath="$PROJECT_DIR$/DP/SubSetSum_02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DP/EqualSumPartition_03.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DP/ZeroOneKnapsack_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/DP/ZeroOneKnapsack_01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DP/SubSetSum_02.java" beforeDir="false" afterPath="$PROJECT_DIR$/DP/SubSetSum_02.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +47,7 @@
     "Application.NoOfProvince_LC_547.executor": "Run",
     "Application.NumberOfConnectedComponents.executor": "Run",
     "Application.Solution.executor": "Run",
+    "Application.SubSetSum_02.executor": "Run",
     "Application.Test.executor": "Run",
     "Application.TrieDriver.executor": "Run",
     "Application.ZeroOneKnapsack_01.executor": "Run",
@@ -62,20 +63,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ZeroOneKnapsack_01">
-    <configuration name="BFS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Graphs.BFS" />
-      <module name="data-structures-algorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Graphs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.SubSetSum_02">
     <configuration name="NoOfProvince_LC_547" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Graphs.NoOfProvince_LC_547" />
       <module name="data-structures-algorithms" />
@@ -115,6 +103,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SubSetSum_02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DP.SubSetSum_02" />
+      <module name="data-structures-algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DP.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ZeroOneKnapsack_01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DP.ZeroOneKnapsack_01" />
       <module name="data-structures-algorithms" />
@@ -130,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SubSetSum_02" />
         <item itemvalue="Application.ZeroOneKnapsack_01" />
         <item itemvalue="Application.NumberOfConnectedComponents" />
         <item itemvalue="Application.NoOfProvince_LC_547" />
         <item itemvalue="Application.Solution" />
-        <item itemvalue="Application.BFS" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758975345980</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="changes">
+      <option name="closed" value="true" />
+      <created>1758986076762</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1758986076762</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

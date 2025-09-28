@@ -1,0 +1,46 @@
+package DP;
+
+/**
+ * @author manishkumar
+ *
+ * https://www.youtube.com/watch?v=UmMh7xp07kY&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=8
+ *
+ * https://www.geeksforgeeks.org/dsa/partition-problem-dp-18/
+ *
+ * https://leetcode.com/problems/partition-equal-subset-sum/
+ */
+
+public class EqualSumPartition_03 {
+
+    public boolean canPartition(int[] arr) {
+        int sum = 0;
+        for(int i = 0 ; i < arr.length ; i++) {
+            sum += arr[i];
+        }
+        if(sum % 2 != 0) {
+            return false;
+        }
+        //Since this partition must be equal , hence sum must be even and if we find half of the sum then we will find the solution as subset sum;
+        int target = sum /2 ;
+        int n = arr.length;
+        boolean[][] mem = new boolean[n + 1][target + 1];
+        for(int i = 0 ; i <= n ; i++) {
+            mem[i][0] = true;
+        }
+        for(int j = 0; j <= target ; j++) {
+            mem[0][j] = false;
+        }
+
+        for(int i = 1; i <= n ;i++){
+            for(int j = 1 ; j <= target;j++) {
+                if(arr[i-1] <= j) {
+                    mem[i][j] = mem[i-1][j-arr[i-1]] || mem[i-1][j];
+                } else {
+                    mem[i][j] = mem[i-1][j];
+                }
+            }
+        }
+        return mem[n][target];
+    }
+
+}
