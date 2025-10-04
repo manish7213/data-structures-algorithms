@@ -3,11 +3,11 @@ package DP;
 /**
  * @author manishkumar
  * <p>
- * https://www.youtube.com/watch?v=UmMh7xp07kY&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=8
+ * <a href="https://www.youtube.com/watch?v=UmMh7xp07kY&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=8">...</a>
  * <p>
- * https://www.geeksforgeeks.org/dsa/partition-problem-dp-18/
+ * <a href="https://www.geeksforgeeks.org/dsa/partition-problem-dp-18/">...</a>
  * <p>
- * https://leetcode.com/problems/partition-equal-subset-sum/
+ * <a href="https://leetcode.com/problems/partition-equal-subset-sum/">...</a>
  */
 
 public class EqualSumPartition_03 {

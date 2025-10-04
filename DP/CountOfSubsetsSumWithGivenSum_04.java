@@ -1,9 +1,9 @@
 package DP;
 
 /**
- * https://www.youtube.com/watch?v=F7wqWbqYn9g&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=9
+ * <a href="https://www.youtube.com/watch?v=F7wqWbqYn9g&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=9">...</a>
  *
- * https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1
+ * <a href="https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1">...</a>
  */
 public class CountOfSubsetsSumWithGivenSum_04 {
 
