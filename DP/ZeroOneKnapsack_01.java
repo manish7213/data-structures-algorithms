@@ -2,9 +2,9 @@ package DP;
 
 /**
  * @author manishkumar
- * https://www.youtube.com/watch?v=ntCGbPMeqgg&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=5
- *
- * https://www.geeksforgeeks.org/dsa/0-1-knapsack-problem-dp-10/
+ * <a href="https://www.youtube.com/watch?v=ntCGbPMeqgg&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=5">YouTube: 0-1-knapsack</a>
+ * <p>
+ * <a href="https://www.geeksforgeeks.org/dsa/0-1-knapsack-problem-dp-10/">GFG: 0-1-knapsack</a>
  */
 public class ZeroOneKnapsack_01 {
     static int knapsack(int W, int[] val, int[] wt) {
@@ -19,8 +19,7 @@ public class ZeroOneKnapsack_01 {
             for (int j = 1; j <= W; j++) {
                 if (wt[i - 1] <= j) {
                     mem[i][j] = Math.max(val[i - 1] + mem[i - 1][j - wt[i - 1]], mem[i - 1][j]);
-                }
-                else {
+                } else {
                     mem[i][j] = mem[i - 1][j];
                 }
             }

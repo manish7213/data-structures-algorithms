@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f05e0f55-14bd-4979-a6b3-bf95962ba4fd" name="Changes" comment="changes">
-      <change afterPath="$PROJECT_DIR$/DP/MinimumSubsetSumDifference_05.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DP/CountOfSubsetsSumWithGivenSum_04.java" beforeDir="false" afterPath="$PROJECT_DIR$/DP/CountOfSubsetsSumWithGivenSum_04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DP/EqualSumPartition_03.java" beforeDir="false" afterPath="$PROJECT_DIR$/DP/EqualSumPartition_03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DP/MinimumSubsetSumDifference_05.java" beforeDir="false" afterPath="$PROJECT_DIR$/DP/MinimumSubsetSumDifference_05.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DP/SubSetSum_02.java" beforeDir="false" afterPath="$PROJECT_DIR$/DP/SubSetSum_02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DP/ZeroOneKnapsack_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/DP/ZeroOneKnapsack_01.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +26,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "manish7213"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="02466423-da5f-47a9-bbff-e3e4e9fd9a66" />
+        <option name="url" value="https://github.com/manish7213/data-structures-algorithms.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -323,7 +340,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759169576115</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="changes">
+      <option name="closed" value="true" />
+      <created>1759570203001</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1759570203001</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
