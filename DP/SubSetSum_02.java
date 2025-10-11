@@ -5,7 +5,7 @@ package DP;
  *
  * <a href="https://www.youtube.com/watch?v=_gPcYovP7wc&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=7">YouTube:subset-sum-problem</a>
  * <p>
- * <a href="https://www.geeksforgeeks.org/dsa/subset-sum-problem-dp-25/">GFG:subset-sum-problem</a>
+ * <a href="https://www.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1">GFG:subset-sum-problem</a>
  */
 public class SubSetSum_02 {
 

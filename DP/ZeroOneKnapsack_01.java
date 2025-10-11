@@ -2,9 +2,10 @@ package DP;
 
 /**
  * @author manishkumar
+ * <br>
  * <a href="https://www.youtube.com/watch?v=ntCGbPMeqgg&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=5">YouTube: 0-1-knapsack</a>
  * <p>
- * <a href="https://www.geeksforgeeks.org/dsa/0-1-knapsack-problem-dp-10/">GFG: 0-1-knapsack</a>
+ * <a href="https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1">GFG: 0-1-knapsack</a>
  */
 public class ZeroOneKnapsack_01 {
     static int knapsack(int W, int[] val, int[] wt) {
