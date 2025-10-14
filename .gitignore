@@ -13,14 +13,11 @@ replay_pid*
 ##############################
 ## IntelliJ
 ##############################
-
-# Exclude specific generated/output directories
-out/
-.idea/workspace.xml
-.idea_modules/
+.idea/
 *.iml
 *.ipr
 *.iws
+out/
 
 # Exclude everything under .idea by default
 .idea/*
