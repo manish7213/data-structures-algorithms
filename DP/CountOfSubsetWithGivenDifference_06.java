@@ -19,6 +19,14 @@ public class CountOfSubsetWithGivenDifference_06 {
         if((d + sum) % 2 != 0) {
             return 0;
         }
+        /**
+         *  s1 - s2 = d
+         *  s1 + s2 = sum
+         *----------------------
+         * 2*s1 = d + sum
+         * s1 = (d + sum) /2
+         *
+         */
         int target = (d + sum)/2;
         int[][] dp = new int[n+1][target+1];
 
