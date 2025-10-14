@@ -23,24 +23,24 @@ public class EqualSumPartition_03 {
         //Since this partition must be equal , hence sum must be even and if we find half of the sum then we will find the solution as subset sum;
         int target = sum / 2;
         int n = arr.length;
-        boolean[][] mem = new boolean[n + 1][target + 1];
+        boolean[][] dp = new boolean[n + 1][target + 1];
         for (int i = 0; i <= n; i++) {
-            mem[i][0] = true;
+            dp[i][0] = true;
         }
         for (int j = 1; j <= target; j++) {
-            mem[0][j] = false;
+            dp[0][j] = false;
         }
 
         for (int i = 1; i <= n; i++) {
             for (int j = 0; j <= target; j++) {
                 if (arr[i - 1] <= j) {
-                    mem[i][j] = mem[i - 1][j - arr[i - 1]] || mem[i - 1][j];
+                    dp[i][j] = dp[i - 1][j - arr[i - 1]] || dp[i - 1][j];
                 } else {
-                    mem[i][j] = mem[i - 1][j];
+                    dp[i][j] = dp[i - 1][j];
                 }
             }
         }
-        return mem[n][target];
+        return dp[n][target];
     }
 
 }

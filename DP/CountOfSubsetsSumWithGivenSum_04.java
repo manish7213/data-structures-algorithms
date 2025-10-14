@@ -14,25 +14,25 @@ public class CountOfSubsetsSumWithGivenSum_04 {
     public int perfectSum(int[] nums, int target) {
 
         int n = nums.length;
-        int[][] mem = new int[n + 1][target + 1];
+        int[][] dp = new int[n + 1][target + 1];
 
         for (int i = 0; i <= n; i++) {
-            mem[i][0] = 1;
+            dp[i][0] = 1;
         }
 
         for (int j = 1; j <= target; j++) { // Here j starts with 1 because
-            mem[0][j] = 0;
+            dp[0][j] = 0;
         }
 
         for (int i = 1; i <= n; i++) {
             for (int j = 0; j <= target; j++) {
                 if (nums[i - 1] <= j) {
-                    mem[i][j] = mem[i - 1][j - nums[i - 1]] + mem[i - 1][j];
+                    dp[i][j] = dp[i - 1][j - nums[i - 1]] + dp[i - 1][j];
                 } else {
-                    mem[i][j] = mem[i - 1][j];
+                    dp[i][j] = dp[i - 1][j];
                 }
             }
         }
-        return mem[n][target];
+        return dp[n][target];
     }
 }
