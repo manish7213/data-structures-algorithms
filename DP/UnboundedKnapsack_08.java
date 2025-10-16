@@ -19,6 +19,7 @@ public class UnboundedKnapsack_08 {
             dp[i][0] = 0;
         }
 
+
         for (int j = 0; j <= capacity; j++) {
             dp[0][j] = 0;
         }
