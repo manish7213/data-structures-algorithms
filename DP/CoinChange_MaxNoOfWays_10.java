@@ -7,7 +7,7 @@ package DP;
  * <p>
  * <a href="https://leetcode.com/problems/coin-change-ii/">Leetcode: CoinChange_MaxNoOfWays</a>
  */
-public class CoinChange_MaxNoOfWays {
+public class CoinChange_MaxNoOfWays_10 {
     public int change(int amount, int[] coins) {
         int n = coins.length;
         int[][] dp = new int[n + 1][amount + 1];
