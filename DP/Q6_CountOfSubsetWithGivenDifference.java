@@ -10,7 +10,7 @@ import java.util.Arrays;
  * <a href="https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1">GFG: Count the number of subset with a given difference</a>
  * </p>
  */
-public class CountOfSubsetWithGivenDifference_06 {
+public class Q6_CountOfSubsetWithGivenDifference {
     int countPartitions(int[] nums, int d) {
 
         // code here

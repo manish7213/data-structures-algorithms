@@ -6,7 +6,7 @@ package DP;
  * <p>
  * <a href="https://www.geeksforgeeks.org/problems/longest-common-substring1452/1">GFG: LongestCommonSubstring</a>
  */
-public class LongestCommonSubstring_13 {
+public class Q13_LongestCommonSubstring {
     public int longestCommonSubstr(String s1, String s2) {
         // code here
         if(s1 == null || s2 == null || s1.isEmpty() || s2.isEmpty()) {
@@ -51,6 +51,6 @@ public class LongestCommonSubstring_13 {
     public static void main(String[] args) {
         String s1 = "ABCDGH";
         String s2 = "ACDGHR";
-        System.out.println(new LongestCommonSubstring_13().longestCommonSubstr(s1, s2));
+        System.out.println(new Q13_LongestCommonSubstring().longestCommonSubstr(s1, s2));
     }
 }

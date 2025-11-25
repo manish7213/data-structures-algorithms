@@ -7,7 +7,7 @@ package DP;
  * <p>
  * <a href="https://www.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1">GFG: Unbounded-knapsack</a>
  */
-public class UnboundedKnapsack_08 {
+public class Q8_UnboundedKnapsack {
 
     static int knapSack(int val[], int wt[], int capacity) {
         // code here

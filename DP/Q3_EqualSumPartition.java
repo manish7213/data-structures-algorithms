@@ -10,7 +10,7 @@ package DP;
  * <a href="https://leetcode.com/problems/partition-equal-subset-sum/">Leetcode: partition-equal-subset-sum</a>
  */
 
-public class EqualSumPartition_03 {
+public class Q3_EqualSumPartition {
 
     public boolean canPartition(int[] arr) {
         int sum = 0;

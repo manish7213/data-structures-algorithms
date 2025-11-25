@@ -3,30 +3,32 @@ package DP;
 /**
  * @author manishkumar
  * <br>
- * <a href="https://www.youtube.com/watch?v=wuOOOATz_IA&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=26">YouTube: LongestPalindromicSubsequence {</a>
+ * <a href="https://www.youtube.com/watch?v=CFwCCNbRuLY&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=27">YouTube: MinNoOfDeletionToMakePalindrome {</a>
  * <p>
- * <a href="https://www.geeksforgeeks.org/problems/longest-palindromic-subsequence-1612327878/1">GFG: LongestPalindromicSubsequence</a>
+ * <a href="https://www.geeksforgeeks.org/problems/minimum-deletitions1648/1">GFG: MinNoOfDeletionToMakePalindrome</a>
  * <p>
  * Hint :
  * {
- *   Reverse the given String and consider it as S2, find the lcs, if lcs exist return it otherwise 0
+ *  s1 = s;
+ *  s2 = reverse(s);
+ *  return len(s) - lcs(s1,s2);
  * }
  */
-public class LongestPalindromicSubsequence_17 {
-    public int longestPalinSubseq(String s) {
+
+public class Q18_MinNoOfDeletionToMakePalindrome {
+    static int minDeletions(String s) {
         // code here
         if (s == null || s.isEmpty()) {
             return 0;
         }
         int m = s.length();
-
-        String s2 = new StringBuilder(s).reverse().toString();
-        int n = s2.length();
+        String s1 = new StringBuilder(s).reverse().toString();
+        int n = s1.length();
         int[][] dp = new int[m + 1][n + 1];
-        return lcs(s, s2, m, n, dp);
+        return m - lcs(s, s1, m, n, dp);
     }
 
-    private int lcs(String s1, String s2, int m, int n, int[][] dp) {
+    private static int lcs(String s1, String s2, int m, int n, int[][] dp) {
         for (int i = 0; i <= m; i++) {
             dp[i][0] = 0;
         }
@@ -46,10 +48,12 @@ public class LongestPalindromicSubsequence_17 {
         }
 
         return dp[m][n];
+
     }
 
     public static void main(String[] args) {
-        String s = "bbabcbcab";
-        System.out.println(new LongestPalindromicSubsequence_17().longestPalinSubseq(s));
+        String s = "aebcbda";
+        System.out.println(minDeletions(s));
     }
 }
+

@@ -7,7 +7,7 @@ package DP;
  * <p>
  * <a href="https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1">GFG: 0-1-knapsack</a>
  */
-public class ZeroOneKnapsack_01 {
+public class Q1_ZeroOneKnapsack {
     static int knapsack(int W, int[] val, int[] wt) {
         int n = val.length;
         int[][] dp = new int[n + 1][W + 1];

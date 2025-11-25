@@ -8,7 +8,7 @@ package DP;
  * <a href="https://www.geeksforgeeks.org/problems/longest-repeating-subsequence2004/1">GFG: LongestRepeatingSubsequence</a>
  * <p>
  */
-public class LongestRepeatingSubsequence_20 {
+public class Q20_LongestRepeatingSubsequence {
     public int LongestRepeatingSubsequence(String s) {
         // code here
         if (s == null || s.isEmpty()) {
@@ -46,6 +46,6 @@ public class LongestRepeatingSubsequence_20 {
 
     public static void main(String[] args) {
         String s = "axxzxy";
-        System.out.println(new LongestRepeatingSubsequence_20().LongestRepeatingSubsequence(s));
+        System.out.println(new Q20_LongestRepeatingSubsequence().LongestRepeatingSubsequence(s));
     }
 }

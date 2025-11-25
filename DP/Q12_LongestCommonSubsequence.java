@@ -7,7 +7,7 @@ package DP;
  * <p>
  * <a href="https://leetcode.com/problems/longest-common-subsequence/">Leetcode: LongestCommonSubsequence</a>
  */
-public class LongestCommonSubsequence_12 {
+public class Q12_LongestCommonSubsequence {
 
     public int longestCommonSubsequence(String text1, String text2) {
         if (text1 == null || text1.isEmpty() || text2 == null || text2.isEmpty()) {
@@ -72,7 +72,7 @@ public class LongestCommonSubsequence_12 {
     public static void main(String[] args) {
         String s1 = "abcde";
         String s2 = "ace";
-        System.out.println(new LongestCommonSubsequence_12().longestCommonSubsequence(s1, s2));
+        System.out.println(new Q12_LongestCommonSubsequence().longestCommonSubsequence(s1, s2));
     }
 
 }

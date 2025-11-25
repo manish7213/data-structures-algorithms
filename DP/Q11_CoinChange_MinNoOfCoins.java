@@ -3,11 +3,11 @@ package DP;
 /**
  * @author manishkumar
  * <br>
- * <a href="https://www.youtube.com/watch?v=I-l6PBeERuc&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=16">YouTube: CoinChange_MinNoOfCoins_11</a>
+ * <a href="https://www.youtube.com/watch?v=I-l6PBeERuc&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=16">YouTube: Q11_CoinChange_MinNoOfCoins</a>
  * <p>
- * <a href="https://leetcode.com/problems/coin-change/">Leetcode: CoinChange_MinNoOfCoins_11</a>
+ * <a href="https://leetcode.com/problems/coin-change/">Leetcode: Q11_CoinChange_MinNoOfCoins</a>
  */
-public class CoinChange_MinNoOfCoins_11 {
+public class Q11_CoinChange_MinNoOfCoins {
     public int coinChange(int[] coins, int amount) {
         int n = coins.length;
         int[][] dp = new int[n + 1][amount + 1];

@@ -9,7 +9,7 @@ package DP;
  * <a href="https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1">GFG: Count Of Subsets Sum With Given Sum</a>
  * </p>
  */
-public class CountOfSubsetsSumWithGivenSum_04 {
+public class Q4_CountOfSubsetsSumWithGivenSum {
 
     public int perfectSum(int[] nums, int target) {
 

@@ -1,13 +1,12 @@
 package DP;
 
-import java.util.List;
 /**
  * @author manishkumar
  * <br>
  * <a href="https://www.youtube.com/watch?v=x5hQvnUcjiM&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=24">YouTube: Print LongestCommonSubsequence</a>
  * <p>
  */
-public class PrintLCS_14 {
+public class Q14_PrintLCS {
     public String printLCS(String s1, String s2) {
         // Code here
         StringBuilder sb = new StringBuilder();
@@ -72,6 +71,6 @@ public class PrintLCS_14 {
     public static void main(String[] args) {
         String s1 = "abaaa";
         String s2 = "baabaca";
-        System.out.println(new PrintLCS_14().printLCS(s1, s2));
+        System.out.println(new Q14_PrintLCS().printLCS(s1, s2));
     }
 }

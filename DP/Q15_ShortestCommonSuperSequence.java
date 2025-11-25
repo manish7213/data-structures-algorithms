@@ -9,7 +9,7 @@ package DP;
  * <p>
  * Hint : m + n - LCS
  */
-public class ShortestCommonSuperSequence_15 {
+public class Q15_ShortestCommonSuperSequence {
 
     public static int shortestCommonSupersequence(String s1, String s2) {
         if (s1 == null || s1.isEmpty() || s2 == null || s2.isEmpty()) {
@@ -54,7 +54,7 @@ public class ShortestCommonSuperSequence_15 {
         String s1 = "geek";
         String s2 = "eke";
 
-        System.out.println(ShortestCommonSuperSequence_15.shortestCommonSupersequence(s1, s2));
+        System.out.println(Q15_ShortestCommonSuperSequence.shortestCommonSupersequence(s1, s2));
     }
 
 }

@@ -11,7 +11,7 @@ import java.util.Arrays;
  * <a href="https://www.geeksforgeeks.org/problems/minimum-sum-partition3317/1">GFG: minimum-sum-partition</a>
  * </p>
  */
-public class MinimumSubsetSumDifference_05 {
+public class Q5_MinimumSubsetSumDifference {
 
     public int minDifference(int arr[]) {
         int n = arr.length;

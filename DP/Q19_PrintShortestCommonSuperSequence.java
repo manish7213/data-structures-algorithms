@@ -8,7 +8,7 @@ package DP;
  * <a href="https://leetcode.com/problems/shortest-common-supersequence/">LC: PrintShortestCommonSuperSequence</a>
  * <p>
  */
-public class PrintShortestCommonSuperSequence_19 {
+public class Q19_PrintShortestCommonSuperSequence {
     public String shortestCommonSupersequence(String s1, String s2) {
         if ((s1 == null || s1.isEmpty()) && (s2 != null && !s2.isEmpty())) {
             return s2;
@@ -80,6 +80,6 @@ public class PrintShortestCommonSuperSequence_19 {
     public static void main(String[] args) {
         String s1 = "abac";
         String s2 = "cab";
-        System.out.println(new PrintShortestCommonSuperSequence_19().shortestCommonSupersequence(s1, s2));
+        System.out.println(new Q19_PrintShortestCommonSuperSequence().shortestCommonSupersequence(s1, s2));
     }
 }

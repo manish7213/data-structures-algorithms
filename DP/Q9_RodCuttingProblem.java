@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
  * <p>
  * <a href="https://www.geeksforgeeks.org/problems/rod-cutting0840/1">GFG: Rod Cutting</a>
  */
-public class RodCuttingProblem_09 {
+public class Q9_RodCuttingProblem {
     public int cutRod(int[] price) {
         // code here
         int n = price.length;

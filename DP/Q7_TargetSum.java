@@ -11,7 +11,7 @@ import java.util.Arrays;
  * <a href="https://leetcode.com/problems/target-sum/description/">Leetcode: Target Sum</a>
  * </p>
  */
-public class TargetSum_07 {
+public class Q7_TargetSum {
 
     public int findTargetSumWays(int[] nums, int d) {
         //consider target as diff as plus and minus will be distributed

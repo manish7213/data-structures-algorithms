@@ -13,7 +13,7 @@ package DP;
  * Min Insertion : len(s2) - lcs(s1,s2)
  * }
  */
-public class MinNoOfInsertionAndDeletionToConvertStringAtoB_16 {
+public class Q16_MinNoOfInsertionAndDeletionToConvertStringAtoB {
 
     public int minOperations(String s1, String s2) {
         // Your code goes here
@@ -55,6 +55,6 @@ public class MinNoOfInsertionAndDeletionToConvertStringAtoB_16 {
     public static void main(String[] args) {
         String s1 = "heap";
         String s2 = "pea";
-        System.out.println(new MinNoOfInsertionAndDeletionToConvertStringAtoB_16().minOperations(s1, s2));
+        System.out.println(new Q16_MinNoOfInsertionAndDeletionToConvertStringAtoB().minOperations(s1, s2));
     }
 }

@@ -7,7 +7,7 @@ package DP;
  * <p>
  * <a href="https://www.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1">GFG:subset-sum-problem</a>
  */
-public class SubSetSum_02 {
+public class Q2_SubSetSum {
 
     static Boolean isSubsetSum(int arr[], int sum) {
         // code here
