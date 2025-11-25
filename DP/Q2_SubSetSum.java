@@ -19,7 +19,7 @@ public class Q2_SubSetSum {
             dp[i][0] = true;
         }
 
-        for (int j = 1; j <= sum; j++) {
+        for (int j = 1; j <= sum; j++) { // Mind this initilization, if we make it from 0 it overwrites the true to false for (0,0).
             dp[0][j] = false;
 
         }
@@ -37,9 +37,11 @@ public class Q2_SubSetSum {
     }
 
     public static void main(String[] args) {
-        int[] arr = {3, 34, 4, 12, 5, 2};
-        int sum = 9;
-        System.out.println(isSubsetSum(arr, sum));
+        System.out.println(isSubsetSum(new int[]{3, 34, 4, 12, 5, 2}, 9));    // true (4+5)
+        System.out.println(isSubsetSum(new int[]{3, 34, 4, 12, 5, 2}, 30));   // false (34-4)
+        System.out.println(isSubsetSum(new int[]{1, 2, 3, 7}, 6));            // true (1+2+3)
+        System.out.println(isSubsetSum(new int[]{1, 2, 7, 1, 5}, 10));        // true (1+2+7)
+        System.out.println(isSubsetSum(new int[]{1, 2, 3}, 7));               // false
     }
 
 
