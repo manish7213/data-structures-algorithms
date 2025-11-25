@@ -20,12 +20,12 @@ public class Q4_CountOfSubsetsSumWithGivenSum {
             dp[i][0] = 1;
         }
 
-        for (int j = 1; j <= target; j++) { // Here j starts with 1 because
+        for (int j = 1; j <= target; j++) { // To be careful!
             dp[0][j] = 0;
         }
 
         for (int i = 1; i <= n; i++) {
-            for (int j = 0; j <= target; j++) {
+            for (int j = 0; j <= target; j++) { // To be careful!
                 if (nums[i - 1] <= j) {
                     dp[i][j] = dp[i - 1][j - nums[i - 1]] + dp[i - 1][j];
                 } else {
