@@ -9,7 +9,7 @@ package DP;
  */
 public class Q2_SubSetSum {
 
-    static Boolean isSubsetSum(int arr[], int sum) {
+    static Boolean isSubsetSum(int[] arr, int sum) {
         // code here
         int n = arr.length;
 
@@ -39,11 +39,7 @@ public class Q2_SubSetSum {
     public static void main(String[] args) {
         int[] arr = {3, 34, 4, 12, 5, 2};
         int sum = 9;
-        if (isSubsetSum(arr, sum)) {
-            System.out.println("True");
-        } else {
-            System.out.println("False");
-        }
+        System.out.println(isSubsetSum(arr, sum));
     }
 
 
