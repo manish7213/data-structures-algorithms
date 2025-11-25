@@ -49,7 +49,13 @@ public class Q17_LongestPalindromicSubsequence {
     }
 
     public static void main(String[] args) {
-        String s = "bbabcbcab";
-        System.out.println(new Q17_LongestPalindromicSubsequence().longestPalinSubseq(s));
+        Q17_LongestPalindromicSubsequence obj = new Q17_LongestPalindromicSubsequence();
+
+        System.out.println("bbabcbcab → " + obj.longestPalinSubseq("bbabcbcab")); // 7
+        System.out.println("bbbab → " + obj.longestPalinSubseq("bbbab"));          // 4
+        System.out.println("cbbd → " + obj.longestPalinSubseq("cbbd"));            // 2
+        System.out.println("abcd → " + obj.longestPalinSubseq("abcd"));            // 1
+        System.out.println("aaaa → " + obj.longestPalinSubseq("aaaa"));            // 4
+        System.out.println("agbdba → " + obj.longestPalinSubseq("agbdba"));        // 5
     }
 }

@@ -51,4 +51,20 @@ public class Q6_CountOfSubsetWithGivenDifference {
         }
         return dp[n][target];
     }
+
+    public static void main(String[] args) {
+        Q6_CountOfSubsetWithGivenDifference obj = new Q6_CountOfSubsetWithGivenDifference();
+
+        int[] arr1 = {1, 1, 2, 3};
+        int diff1 = 1;
+
+        int[] arr2 = {1, 2, 3, 1, 2};
+        int diff2 = 2;
+
+        System.out.println("Input: {1,1,2,3}, diff = 1 → Count = "
+                + obj.countPartitions(arr1, diff1));   // Output: 3
+
+        System.out.println("Input: {1,2,3,1,2}, diff = 2 → Count = "
+                + obj.countPartitions(arr2, diff2));   // Output: 0
+    }
 }

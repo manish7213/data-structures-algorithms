@@ -54,7 +54,20 @@ public class Q15_ShortestCommonSuperSequence {
         String s1 = "geek";
         String s2 = "eke";
 
-        System.out.println(Q15_ShortestCommonSuperSequence.shortestCommonSupersequence(s1, s2));
+        String a1 = "abac";
+        String a2 = "cab";
+
+        String b1 = "AGGTAB";
+        String b2 = "GXTXAYB";
+
+        System.out.println("SCS(geek, eke) = " +
+                shortestCommonSupersequence(s1, s2));     // Expected: 5
+
+        System.out.println("SCS(abac, cab) = " +
+                shortestCommonSupersequence(a1, a2));     // Expected: 5
+
+        System.out.println("SCS(AGGTAB, GXTXAYB) = " +
+                shortestCommonSupersequence(b1, b2));     // Expected: 9
     }
 
 }

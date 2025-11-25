@@ -70,9 +70,25 @@ public class Q12_LongestCommonSubsequence {
         return dp[m][n];
     }
     public static void main(String[] args) {
+        Q12_LongestCommonSubsequence obj = new Q12_LongestCommonSubsequence();
+
         String s1 = "abcde";
         String s2 = "ace";
-        System.out.println(new Q12_LongestCommonSubsequence().longestCommonSubsequence(s1, s2));
+
+        String s3 = "AGGTAB";
+        String s4 = "GXTXAYB";
+
+        String s5 = "abcdgh";
+        String s6 = "aedfhr";
+
+        System.out.println("\"abcde\" vs \"ace\" → LCS length = "
+                + obj.longestCommonSubsequence(s1, s2));       // Expected: 3
+
+        System.out.println("\"AGGTAB\" vs \"GXTXAYB\" → LCS length = "
+                + obj.longestCommonSubsequence(s3, s4));       // Expected: 4  (GTAB)
+
+        System.out.println("\"abcdgh\" vs \"aedfhr\" → LCS length = "
+                + obj.longestCommonSubsequence(s5, s6));       // Expected: 3  (adh)
     }
 
 }

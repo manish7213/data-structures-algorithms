@@ -50,4 +50,27 @@ public class Q7_TargetSum {
         return dp[n][target];
 
     }
+
+    public static void main(String[] args) {
+
+        Q7_TargetSum obj = new Q7_TargetSum();
+
+        int[] arr1 = {1, 1, 1, 1, 1};
+        int target1 = 3;
+
+        int[] arr2 = {2, 1, 1, 2};
+        int target2 = 2;
+
+        int[] arr3 = {1, 2, 7, 9, 981};
+        int target3 = 1000;
+
+        System.out.println("Input: {1,1,1,1,1}, Target = 3 → Ways = "
+                + obj.findTargetSumWays(arr1, target1));   // Output: 5
+
+        System.out.println("Input: {2,1,1,2}, Target = 2 → Ways = "
+                + obj.findTargetSumWays(arr2, target2));   // Output: 3
+
+        System.out.println("Input: {1,2,7,9,981}, Target = 1000 → Ways = "
+                + obj.findTargetSumWays(arr3, target3));  // Output: 1
+    }
 }

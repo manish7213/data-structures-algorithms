@@ -53,8 +53,13 @@ public class Q16_MinNoOfInsertionAndDeletionToConvertStringAtoB {
     }
 
     public static void main(String[] args) {
-        String s1 = "heap";
-        String s2 = "pea";
-        System.out.println(new Q16_MinNoOfInsertionAndDeletionToConvertStringAtoB().minOperations(s1, s2));
+        Q16_MinNoOfInsertionAndDeletionToConvertStringAtoB obj =
+                new Q16_MinNoOfInsertionAndDeletionToConvertStringAtoB();
+
+        System.out.println("heap → pea = " + obj.minOperations("heap", "pea"));  // 3
+        System.out.println("abcdef → axcdfdh = " + obj.minOperations("abcdef", "axcdfdh")); // 5
+        System.out.println("abc → abc = " + obj.minOperations("abc", "abc"));  // 0
+        System.out.println("abcdef → \" \" = " + obj.minOperations("abcdef", ""));  // 6
+        System.out.println("\"\" → abc = " + obj.minOperations("", "abc"));  // 3
     }
 }

@@ -69,8 +69,19 @@ public class Q14_PrintLCS {
     }
 
     public static void main(String[] args) {
+        Q14_PrintLCS obj = new Q14_PrintLCS();
+
         String s1 = "abaaa";
         String s2 = "baabaca";
-        System.out.println(new Q14_PrintLCS().printLCS(s1, s2));
+
+        String a1 = "abcde";
+        String a2 = "ace";
+
+        String b1 = "AGGTAB";
+        String b2 = "GXTXAYB";
+
+        System.out.println("LCS(abaaa, baabaca) = " + obj.printLCS(s1, s2));   // Expected: abaa
+        System.out.println("LCS(abcde, ace) = " + obj.printLCS(a1, a2));       // Expected: ace
+        System.out.println("LCS(AGGTAB, GXTXAYB) = " + obj.printLCS(b1, b2));  // Expected: GTAB
     }
 }

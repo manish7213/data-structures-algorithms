@@ -43,4 +43,14 @@ public class Q3_EqualSumPartition {
         return dp[n][target];
     }
 
+    public static void main(String[] args) {
+        Q3_EqualSumPartition obj = new Q3_EqualSumPartition();
+
+        int[] arr1 = {1, 5, 11, 5};
+        int[] arr2 = {1, 2, 3, 5};
+
+        System.out.println("Input: {1, 5, 11, 5} → " + obj.canPartition(arr1));  // true
+        System.out.println("Input: {1, 2, 3, 5} → " + obj.canPartition(arr2));  // false
+    }
+
 }

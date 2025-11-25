@@ -38,13 +38,26 @@ public class Q5_MinimumSubsetSumDifference {
         int s1 = 0;
 
         for (int i = 0; i <= range / 2; i++) {
-            if (dp[n][i] == true) { // last row of the dp matrix
+            if (dp[n][i]) { // last row of the dp matrix
                 s1 = i;
             }
         }
 
         return range - 2 * s1;
 
+    }
+
+    public static void main(String[] args) {
+        Q5_MinimumSubsetSumDifference obj = new Q5_MinimumSubsetSumDifference();
+
+        int[] arr1 = {1, 6, 11, 5};
+        int[] arr2 = {3, 1, 4, 2, 2};
+
+        System.out.println("Input: {1, 6, 11, 5} → Min Difference = "
+                + obj.minDifference(arr1));   // Output: 1
+
+        System.out.println("Input: {3, 1, 4, 2, 2} → Min Difference = "
+                + obj.minDifference(arr2));  // Output: 0
     }
 
 }

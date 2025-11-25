@@ -15,11 +15,6 @@ public class Q13_LongestCommonSubstring {
         int m = s1.length();
         int n = s2.length();
         int[][] dp = new int[m+1][n+1];
-        for (int i = 0; i <= m; i++) {
-            for (int j = 0; j <= n; j++) {
-                dp[i][j] = -1;
-            }
-        }
         int maxLen = 0;
         return longestCommonSubstrHelper(s1,s2,m,n,dp,maxLen);
     }
@@ -49,8 +44,24 @@ public class Q13_LongestCommonSubstring {
     }
 
     public static void main(String[] args) {
-        String s1 = "ABCDGH";
-        String s2 = "ACDGHR";
-        System.out.println(new Q13_LongestCommonSubstring().longestCommonSubstr(s1, s2));
+        Q13_LongestCommonSubstring obj = new Q13_LongestCommonSubstring();
+
+        String a1 = "ABCDGH";
+        String b1 = "ACDGHR";
+
+        String a2 = "abcdef";
+        String b2 = "zcdemf";
+
+        String a3 = "xyz";
+        String b3 = "abc";
+
+        System.out.println("\"ABCDGH\" vs \"ACDGHR\" → LCSstr length = "
+                + obj.longestCommonSubstr(a1, b1));   // Expected: 4 ("CDGH")
+
+        System.out.println("\"abcdef\" vs \"zcdemf\" → LCSstr length = "
+                + obj.longestCommonSubstr(a2, b2));   // Expected: 3 ("cde")
+
+        System.out.println("\"xyz\" vs \"abc\" → LCSstr length = "
+                + obj.longestCommonSubstr(a3, b3));   // Expected: 0
     }
 }

@@ -35,4 +35,26 @@ public class Q10_CoinChange_MaxNoOfWays {
         return dp[n][amount];
     }
 
+    public static void main(String[] args) {
+        Q10_CoinChange_MaxNoOfWays obj = new Q10_CoinChange_MaxNoOfWays();
+
+        int[] coins1 = {1, 2, 5};
+        int amount1 = 5;
+
+        int[] coins2 = {2};
+        int amount2 = 3;
+
+        int[] coins3 = {1, 2, 3};
+        int amount3 = 4;
+
+        System.out.println("Coins: {1,2,5}, Amount = 5 → Ways = "
+                + obj.change(amount1, coins1));   // Expected: 4
+
+        System.out.println("Coins: {2}, Amount = 3 → Ways = "
+                + obj.change(amount2, coins2));   // Expected: 0
+
+        System.out.println("Coins: {1,2,3}, Amount = 4 → Ways = "
+                + obj.change(amount3, coins3));   // Expected: 4
+    }
+
 }

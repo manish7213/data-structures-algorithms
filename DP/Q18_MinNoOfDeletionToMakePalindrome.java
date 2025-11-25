@@ -52,8 +52,11 @@ public class Q18_MinNoOfDeletionToMakePalindrome {
     }
 
     public static void main(String[] args) {
-        String s = "aebcbda";
-        System.out.println(minDeletions(s));
+        System.out.println(minDeletions("aebcbda")); // 2
+        System.out.println(minDeletions("geeksforgeeks")); // 8
+        System.out.println(minDeletions("abcda")); // 2
+        System.out.println(minDeletions("aaaa")); // 0
+        System.out.println(minDeletions("abcd")); // 3
     }
 }
 

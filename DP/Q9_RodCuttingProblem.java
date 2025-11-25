@@ -40,4 +40,22 @@ public class Q9_RodCuttingProblem {
 
         return dp[n][n];
     }
+
+    public static void main(String[] args) {
+
+        Q9_RodCuttingProblem obj = new Q9_RodCuttingProblem();
+
+        int[] p1 = {1, 5, 8, 9, 10, 17, 17, 20};
+        int[] p2 = {3, 5, 8, 9, 10, 17, 17, 20};
+        int[] p3 = {2, 5, 7, 8};
+
+        System.out.println("Price: {1,5,8,9,10,17,17,20} → Max revenue = "
+                + obj.cutRod(p1));  // Expected: 22
+
+        System.out.println("Price: {3,5,8,9,10,17,17,20} → Max revenue = "
+                + obj.cutRod(p2));  // Expected: 24
+
+        System.out.println("Price: {2,5,7,8} → Max revenue = "
+                + obj.cutRod(p3));  // Expected: 10
+    }
 }

@@ -44,4 +44,26 @@ public class Q11_CoinChange_MinNoOfCoins {
         }
         return dp[n][amount];
     }
+
+    public static void main(String[] args) {
+        Q11_CoinChange_MinNoOfCoins obj = new Q11_CoinChange_MinNoOfCoins();
+
+        int[] coins1 = {1, 2, 5};
+        int amount1 = 11;
+
+        int[] coins2 = {2};
+        int amount2 = 3;
+
+        int[] coins3 = {1, 3, 4};
+        int amount3 = 6;
+
+        System.out.println("Coins: {1,2,5}, Amount = 11 → Min coins = "
+                + obj.coinChange(coins1, amount1));     // Expected: 3 (5+5+1)
+
+        System.out.println("Coins: {2}, Amount = 3 → Min coins = "
+                + obj.coinChange(coins2, amount2));     // Expected: -1
+
+        System.out.println("Coins: {1,3,4}, Amount = 6 → Min coins = "
+                + obj.coinChange(coins3, amount3));     // Expected: 2 (3+3)
+    }
 }

@@ -78,8 +78,11 @@ public class Q19_PrintShortestCommonSuperSequence {
     }
 
     public static void main(String[] args) {
-        String s1 = "abac";
-        String s2 = "cab";
-        System.out.println(new Q19_PrintShortestCommonSuperSequence().shortestCommonSupersequence(s1, s2));
+        Q19_PrintShortestCommonSuperSequence obj = new Q19_PrintShortestCommonSuperSequence();
+
+        System.out.println(obj.shortestCommonSupersequence("abac", "cab"));    // cabac
+        System.out.println(obj.shortestCommonSupersequence("geek", "eke"));    // gekek OR geeke
+        System.out.println(obj.shortestCommonSupersequence("abc", "acd"));     // abcd
+        System.out.println(obj.shortestCommonSupersequence("AGGTAB", "GXTXAYB")); // AGGXTXAYB
     }
 }

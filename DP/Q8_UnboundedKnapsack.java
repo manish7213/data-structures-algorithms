@@ -36,4 +36,23 @@ public class Q8_UnboundedKnapsack {
         }
         return dp[n][capacity];
     }
+
+    public static void main(String[] args) {
+
+        int[] val1 = {10, 40, 50, 70};
+        int[] wt1  = {1,  3,  4,  5};
+        int cap1   = 8;
+
+        int[] val2 = {1, 30};
+        int[] wt2  = {1, 50};
+        int cap2   = 100;
+
+        int[] val3 = {5, 11, 13};
+        int[] wt3  = {2,  4,  6};
+        int cap3   = 10;
+
+        System.out.println("Test 1 → Max value = " + knapSack(val1, wt1, cap1)); // Expected: 110
+        System.out.println("Test 2 → Max value = " + knapSack(val2, wt2, cap2)); // Expected: 100
+        System.out.println("Test 3 → Max value = " + knapSack(val3, wt3, cap3)); // Expected: 27
+    }
 }

@@ -35,4 +35,20 @@ public class Q4_CountOfSubsetsSumWithGivenSum {
         }
         return dp[n][target];
     }
+
+    public static void main(String[] args) {
+        Q4_CountOfSubsetsSumWithGivenSum obj = new Q4_CountOfSubsetsSumWithGivenSum();
+
+        int[] arr1 = {1, 2, 3, 3};
+        int target1 = 6;
+
+        int[] arr2 = {2, 3, 5, 6, 8, 10};
+        int target2 = 10;
+
+        System.out.println("Input: {1,2,3,3}, Target = 6 → Subset Count = "
+                + obj.perfectSum(arr1, target1));    // Output: 3
+
+        System.out.println("Input: {2,3,5,6,8,10}, Target = 10 → Subset Count = "
+                + obj.perfectSum(arr2, target2));    // Output: 3
+    }
 }

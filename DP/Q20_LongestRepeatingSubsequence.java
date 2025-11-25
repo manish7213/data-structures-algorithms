@@ -45,7 +45,12 @@ public class Q20_LongestRepeatingSubsequence {
     }
 
     public static void main(String[] args) {
-        String s = "axxzxy";
-        System.out.println(new Q20_LongestRepeatingSubsequence().LongestRepeatingSubsequence(s));
+        Q20_LongestRepeatingSubsequence obj = new Q20_LongestRepeatingSubsequence();
+
+        System.out.println(obj.LongestRepeatingSubsequence("axxzxy")); // 2 ("xx")
+        System.out.println(obj.LongestRepeatingSubsequence("aab"));    // 1 ("a")
+        System.out.println(obj.LongestRepeatingSubsequence("aabb"));   // 2 ("ab" or "aa" or "bb")
+        System.out.println(obj.LongestRepeatingSubsequence("abc"));    // 0
+        System.out.println(obj.LongestRepeatingSubsequence("aaaa"));   // 3 ("aaa")
     }
 }
