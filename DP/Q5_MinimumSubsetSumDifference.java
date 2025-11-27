@@ -13,7 +13,7 @@ import java.util.Arrays;
  */
 public class Q5_MinimumSubsetSumDifference {
 
-    public int minDifference(int arr[]) {
+    public int minDifference(int[] arr) {
         int n = arr.length;
         int range = Arrays.stream(arr).sum();
 
@@ -37,9 +37,9 @@ public class Q5_MinimumSubsetSumDifference {
 
         int s1 = 0;
 
-        for (int i = 0; i <= range / 2; i++) {
-            if (dp[n][i]) { // last row of the dp matrix
-                s1 = i;
+        for (int j = 0; j <= range / 2; j++) {
+            if (dp[n][j]) { // last row of the dp matrix
+                s1 = j;
             }
         }
 
