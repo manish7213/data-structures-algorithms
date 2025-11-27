@@ -7,7 +7,7 @@ import java.util.Arrays;
  * <a href="https://www.youtube.com/watch?v=ot_XBHyqpFc&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=13">YouTube: Count the number of subset with a given difference</a>
  * </p>
  * <p>
- * <a href="https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1">GFG: Count the number of subset with a given difference</a>
+ * <a href="https://www.geeksforgeeks.org/problems/partitions-with-given-difference/1">GFG: Count the number of subset with a given difference</a>
  * </p>
  */
 public class Q6_CountOfSubsetWithGivenDifference {
@@ -16,6 +16,7 @@ public class Q6_CountOfSubsetWithGivenDifference {
         // code here
         int n = nums.length;
         int sum = Arrays.stream(nums).sum();
+        // Important
         if((d + sum) % 2 != 0) {
             return 0;
         }
