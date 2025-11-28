@@ -1,4 +1,4 @@
-package DP;
+package DP.Pattern_01_ZeroOneKnapsack;
 
 import java.util.Arrays;
 /**

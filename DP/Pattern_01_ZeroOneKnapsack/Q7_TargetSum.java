@@ -1,4 +1,4 @@
-package DP;
+package DP.Pattern_01_ZeroOneKnapsack;
 
 import java.util.Arrays;
 
@@ -13,17 +13,17 @@ import java.util.Arrays;
  */
 public class Q7_TargetSum {
 
-    public int findTargetSumWays(int[] nums, int d) {
+    public int findTargetSumWays(int[] nums, int target) {
         //consider target as diff as plus and minus will be distributed
 
         int n = nums.length;
         int sum = Arrays.stream(nums).sum();
         // IMPORTANT
-        if ((sum + d) % 2 != 0 || sum < d || sum + d < 0) {
+        if ((sum + target) % 2 != 0 || sum < target || sum + target < 0) {
             return 0;
         }
-        int target = (sum + d) / 2;
-        int[][] dp = new int[n + 1][target + 1];
+        int derivedTarget = (sum + target) / 2;
+        int[][] dp = new int[n + 1][derivedTarget + 1];
 
         //initilization
 
@@ -31,14 +31,14 @@ public class Q7_TargetSum {
             dp[i][0] = 1;
         }
 
-        for (int j = 1; j <= target; j++) {
+        for (int j = 1; j <= derivedTarget; j++) {
             dp[0][j] = 0;
         }
 
         //code
 
         for (int i = 1; i <= n; i++) {
-            for (int j = 0; j <= target; j++) {
+            for (int j = 0; j <= derivedTarget; j++) {
                 if (nums[i - 1] <= j) {
                     dp[i][j] = dp[i - 1][j - nums[i - 1]] + dp[i - 1][j];
                 } else {
@@ -47,7 +47,7 @@ public class Q7_TargetSum {
             }
         }
 
-        return dp[n][target];
+        return dp[n][derivedTarget];
 
     }
 

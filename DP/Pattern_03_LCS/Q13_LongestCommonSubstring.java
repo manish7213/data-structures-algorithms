@@ -1,4 +1,4 @@
-package DP;
+package DP.Pattern_03_LCS;
 /**
  * @author manishkumar
  * <br>

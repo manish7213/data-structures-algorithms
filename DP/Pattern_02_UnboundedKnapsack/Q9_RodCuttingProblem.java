@@ -1,4 +1,4 @@
-package DP;
+package DP.Pattern_02_UnboundedKnapsack;
 
 import java.util.stream.IntStream;
 
