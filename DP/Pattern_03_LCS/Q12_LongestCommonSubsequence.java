@@ -78,8 +78,8 @@ public class Q12_LongestCommonSubsequence {
         String s3 = "AGGTAB";
         String s4 = "GXTXAYB";
 
-        String s5 = "abcdgh";
-        String s6 = "aedfhr";
+        String s5 = "aebcbda";
+        String s6 = "adbcbea";
 
         System.out.println("\"abcde\" vs \"ace\" → LCS length = "
                 + obj.longestCommonSubsequence(s1, s2));       // Expected: 3
@@ -87,7 +87,7 @@ public class Q12_LongestCommonSubsequence {
         System.out.println("\"AGGTAB\" vs \"GXTXAYB\" → LCS length = "
                 + obj.longestCommonSubsequence(s3, s4));       // Expected: 4  (GTAB)
 
-        System.out.println("\"abcdgh\" vs \"aedfhr\" → LCS length = "
+        System.out.println("\"aebcbda\" vs \"adbcbea\" → LCS length = "
                 + obj.longestCommonSubsequence(s5, s6));       // Expected: 3  (adh)
     }
 
