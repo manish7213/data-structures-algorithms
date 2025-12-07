@@ -1,4 +1,14 @@
 package DP.Pattern_05_DP_On_Trees;
+
+/**
+ * @author manishkumar
+ * <br>
+ * <a href="https://www.youtube.com/watch?v=zmPj_Ee3B8c&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=47">YouTube: DiameterOfBinaryTree</a>
+ * <p>
+ * <a href="https://leetcode.com/problems/diameter-of-binary-tree/description/">LC: DiameterOfBinaryTree</a>
+ * <p>
+ * <p>
+ */
 public class Q26_Diameter_Binary_Tree {
     public int diameterOfBinaryTree(TreeNode root) {
         return dfs(root).diameter;
