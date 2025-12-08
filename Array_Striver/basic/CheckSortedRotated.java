@@ -2,6 +2,11 @@ package Array_Striver.basic;
 
 import java.util.Arrays;
 
+/**
+ * @author manishkumar
+ *
+ * <a href="https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/">CheckSortedRotated</a>
+ */
 public class CheckSortedRotated {
 
     private static boolean isSortedRotated(int[] nums) {
