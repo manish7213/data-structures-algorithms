@@ -19,7 +19,7 @@ public class Q2_SubSetSum {
             dp[i][0] = true;
         }
 
-        for (int j = 1; j <= sum; j++) { // Mind this initilization, if we make it from 0 it overwrites the true to false for (0,0).
+        for (int j = 1; j <= sum; j++) { // Mind this initialization, if we make it from 0 it overwrites the true to false for (0,0).
             dp[0][j] = false;
 
         }

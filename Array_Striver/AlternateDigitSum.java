@@ -1,9 +1,9 @@
-package Array_Striver.easy;
+package Array_Striver;
 
 /**
  * @author manishkumar
  *
- * <a href="https://leetcode.com/problems/alternating-digit-sum/">...</a>
+ * <a href="https://leetcode.com/problems/alternating-digit-sum/">AlternateDigitSum</a>
  */
 public class AlternateDigitSum {
     public int alternateDigitSum(int n) {

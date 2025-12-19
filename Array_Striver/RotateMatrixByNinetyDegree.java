@@ -1,4 +1,4 @@
-package Array_Striver.easy;
+package Array_Striver;
 
 public class RotateMatrixByNinetyDegree {
     public void rotate(int[][] matrix) {

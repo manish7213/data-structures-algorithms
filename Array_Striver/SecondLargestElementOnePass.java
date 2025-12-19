@@ -1,4 +1,4 @@
-package Array_Striver.basic;
+package Array_Striver;
 
 /**
  * @author manishkumar

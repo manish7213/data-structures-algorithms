@@ -1,4 +1,4 @@
-package Array_Striver.easy;
+package Array_Striver;
 
 import java.util.Arrays;
 

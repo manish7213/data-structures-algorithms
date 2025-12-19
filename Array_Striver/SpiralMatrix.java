@@ -1,4 +1,4 @@
-package Array_Striver.medium;
+package Array_Striver;
 
 import java.util.ArrayList;
 import java.util.List;

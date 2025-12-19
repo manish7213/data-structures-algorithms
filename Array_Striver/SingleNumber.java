@@ -1,9 +1,9 @@
-package Array_Striver.easy;
+package Array_Striver;
 
 /**
  * @author manishkumar
  * <p>
- * <a href="https://leetcode.com/problems/single-number/">...</a>
+ * <a href="https://leetcode.com/problems/single-number/">SingleNumber</a>
  */
 public class SingleNumber {
     public int singleNumber(int[] nums) {
