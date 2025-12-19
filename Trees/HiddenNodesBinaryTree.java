@@ -10,12 +10,12 @@ import java.util.Map;
 /**
  *
  * A node is hidden if it does not appear in left view AND does not appear in right view.
- *
- * DFS left-to-right to record earliest node per depth → left view.
- *
- * DFS right-to-left to record earliest node per depth → right view.
- *
- * DFS again to list nodes not in left/right sets.
+
+ 1. DFS left-to-right to record earliest node per depth → left view.
+
+ 2.  DFS right-to-left to record earliest node per depth → right view.
+
+ 3.  DFS again to list nodes not in left/right sets.
  */
 public class HiddenNodesBinaryTree {
 
