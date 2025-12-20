@@ -3,7 +3,7 @@ package Array_Striver;
 /**
  * @author manishkumar
  *
- * <a href="https://leetcode.com/problems/remove-one-element-to-make-the-array-strictly-increasing/">...</a>
+ * <a href="https://leetcode.com/problems/remove-one-element-to-make-the-array-strictly-increasing/">CheckStrictlyIncreasing</a>
  */
 public class CheckStrictlyIncreasing {
     public boolean canBeIncreasing(int[] nums) {

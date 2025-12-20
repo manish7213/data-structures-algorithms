@@ -3,7 +3,7 @@ package Array_Striver;
 /**
  * @author manishkumar
  *
- * <a href="https://leetcode.com/problems/max-consecutive-ones/description/">...</a>
+ * <a href="https://leetcode.com/problems/max-consecutive-ones/description/">MaxConsecutiveOnes</a>
  */
 public class MaxConsecutiveOnes {
     public int findMaxConsecutiveOnes(int[] nums) {
