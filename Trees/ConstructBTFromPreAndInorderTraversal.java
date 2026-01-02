@@ -9,34 +9,33 @@ import java.util.Map;
  * <a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/">ConstructBTFromPreAndInorderTraversal</a>
  */
 public class ConstructBTFromPreAndInorderTraversal {
+    private int preOrderRootIndex;
     public TreeNode buildTree(int[] preorder, int[] inorder) {
+        preOrderRootIndex = 0;
         Map<Integer, Integer> inorderMap = new HashMap<>();
         for (int i = 0; i < inorder.length; i++) {
             inorderMap.put(inorder[i], i);
         }
 
-        return buildTreeHelper(preorder, inorderMap, 0, 0, inorder.length - 1);
+        return buildTreeHelper(preorder, inorderMap, 0, inorder.length - 1);
     }
 
-    private TreeNode buildTreeHelper(int[] preorder, Map<Integer, Integer> inorderMap, int root, int left, int right) {
+    private TreeNode buildTreeHelper(int[] preorder, Map<Integer,Integer> inorderMap, int left, int right) {
 
-        if (left > right) {
+        if(left > right) {
             return null;
         }
+        TreeNode rootNode = new TreeNode(preorder[preOrderRootIndex]);
+        int rootIndex = inorderMap.get(preorder[preOrderRootIndex]);
 
-        TreeNode rootNode = new TreeNode(preorder[root]);
+        preOrderRootIndex++;
 
-        int mid = inorderMap.get(preorder[root]);
+        rootNode.left = buildTreeHelper(preorder, inorderMap,  left, rootIndex - 1);
 
-        if (left < mid) {
-            rootNode.left = buildTreeHelper(preorder, inorderMap, root + 1, left, mid - 1); // root + 1 because left starts immediately after root in preorder.
-        }
-
-        if (mid < right) {
-            rootNode.right = buildTreeHelper(preorder, inorderMap, root + mid - left + 1, mid + 1, right); // root + 1 + leftSubTreeSize
-        }
+        rootNode.right = buildTreeHelper(preorder, inorderMap, rootIndex + 1, right);
 
         return rootNode;
+
     }
 
     public static void main(String[] args) {

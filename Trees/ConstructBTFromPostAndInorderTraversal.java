@@ -9,43 +9,46 @@ import java.util.Map;
  * <a href="https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/">ConstructBTFromPostAndInorderTraversal</a>
  */
 public class ConstructBTFromPostAndInorderTraversal {
-    public TreeNode buildTree(int[] postorderTraversal, int[] inorderTraversal) {
+    private int rootIndex;
 
-        // Maps node value → its index in inorder traversal
-        Map<Integer, Integer> inorderIndexByValue = new HashMap<>();
 
-        for (int index = 0; index < inorderTraversal.length; index++) {
-            inorderIndexByValue.put(inorderTraversal[index], index);
+    public TreeNode buildTree(int[] inorderTraversal, int[] postorderTraversal) {
+
+        rootIndex = postorderTraversal.length - 1;
+
+        Map<Integer, Integer> inorderMap = new HashMap<>();
+
+        for (int i = 0; i < inorderTraversal.length; i++) {
+            inorderMap.put(inorderTraversal[i], i);
         }
 
-        // Build the entire tree using full traversal ranges
-        return buildSubtree(postorderTraversal, 0, postorderTraversal.length - 1, 0, inorderTraversal.length - 1, inorderIndexByValue);
+        return buildSubtree(postorderTraversal, inorderMap, 0,
+                inorderTraversal.length - 1);
     }
 
-    private TreeNode buildSubtree(int[] postorderTraversal, int postorderStartIndex, int postorderEndIndex, int inorderStartIndex, int inorderEndIndex, Map<Integer, Integer> inorderIndexByValue) {
+    private TreeNode buildSubtree(int[] postorderTraversal, Map<Integer, Integer> inorderMap,
+                                  int left, int right) {
 
-        // No elements left to construct this subtree
-        if (postorderStartIndex > postorderEndIndex || inorderStartIndex > inorderEndIndex) {
+        if (left > right) {
             return null;
         }
 
-        // First element in preorder range is always the root
-        int rootValue = postorderTraversal[postorderEndIndex];
+        int rootValue = postorderTraversal[rootIndex--];
         TreeNode rootNode = new TreeNode(rootValue);
 
-        // Locate root in inorder traversal
-        int rootIndexInInorder = inorderIndexByValue.get(rootValue);
+        int inorderRootIndex = inorderMap.get(rootValue);
 
-        // Count of nodes in the left subtree
-        int leftSubtreeSize = rootIndexInInorder - inorderStartIndex;
+        rootNode.right = buildSubtree(
+                postorderTraversal,
+                inorderMap,
+                inorderRootIndex + 1,
+                right);
 
-        // Recursively build left subtree
-        rootNode.left = buildSubtree(postorderTraversal, postorderStartIndex + 1, postorderStartIndex + leftSubtreeSize, inorderStartIndex,
-                rootIndexInInorder - 1, inorderIndexByValue);
-
-        // Recursively build right subtree
-        rootNode.right = buildSubtree(postorderTraversal, postorderStartIndex + leftSubtreeSize + 1, postorderEndIndex, rootIndexInInorder + 1,
-                inorderEndIndex, inorderIndexByValue);
+        rootNode.left = buildSubtree(
+                postorderTraversal,
+                inorderMap,
+                left,
+                inorderRootIndex - 1);
 
         return rootNode;
     }
@@ -53,7 +56,7 @@ public class ConstructBTFromPostAndInorderTraversal {
     public static void main(String[] args) {
 
         int[] preorder = {3, 9, 20, 15, 7};
-        int[] inorder  = {9, 3, 15, 20, 7};
+        int[] inorder = {9, 3, 15, 20, 7};
 
         ConstructBTFromPostAndInorderTraversal solution = new ConstructBTFromPostAndInorderTraversal();
         TreeNode root = solution.buildTree(preorder, inorder);
