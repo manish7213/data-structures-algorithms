@@ -9,43 +9,32 @@ import java.util.Map;
  * <a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/">ConstructBTFromPreAndInorderTraversal</a>
  */
 public class ConstructBTFromPreAndInorderTraversal {
-    public TreeNode buildTree(int[] preorderTraversal, int[] inorderTraversal) {
-
-        // Maps node value → its index in inorder traversal
-        Map<Integer, Integer> inorderIndexByValue = new HashMap<>();
-
-        for (int index = 0; index < inorderTraversal.length; index++) {
-            inorderIndexByValue.put(inorderTraversal[index], index);
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        Map<Integer, Integer> inorderMap = new HashMap<>();
+        for (int i = 0; i < inorder.length; i++) {
+            inorderMap.put(inorder[i], i);
         }
 
-        // Build the entire tree using full traversal ranges
-        return buildSubtree(preorderTraversal, 0, preorderTraversal.length - 1, 0, inorderTraversal.length - 1, inorderIndexByValue);
+        return buildTreeHelper(preorder, inorderMap, 0, 0, inorder.length - 1);
     }
 
-    private TreeNode buildSubtree(int[] preorderTraversal, int preorderStartIndex, int preorderEndIndex, int inorderStartIndex, int inorderEndIndex, Map<Integer, Integer> inorderIndexByValue) {
+    private TreeNode buildTreeHelper(int[] preorder, Map<Integer, Integer> inorderMap, int root, int left, int right) {
 
-        // No elements left to construct this subtree
-        if (preorderStartIndex > preorderEndIndex || inorderStartIndex > inorderEndIndex) {
+        if (left > right) {
             return null;
         }
 
-        // First element in preorder range is always the root
-        int rootValue = preorderTraversal[preorderStartIndex];
-        TreeNode rootNode = new TreeNode(rootValue);
+        TreeNode rootNode = new TreeNode(preorder[root]);
 
-        // Locate root in inorder traversal
-        int rootIndexInInorder = inorderIndexByValue.get(rootValue);
+        int mid = inorderMap.get(preorder[root]);
 
-        // Count of nodes in the left subtree
-        int leftSubtreeSize = rootIndexInInorder - inorderStartIndex;
+        if (left < mid) {
+            rootNode.left = buildTreeHelper(preorder, inorderMap, root + 1, left, mid - 1); // root + 1 because left starts immediately after root in preorder.
+        }
 
-        // Recursively build left subtree
-        rootNode.left = buildSubtree(preorderTraversal, preorderStartIndex + 1, preorderStartIndex + leftSubtreeSize, inorderStartIndex,
-                rootIndexInInorder - 1, inorderIndexByValue);
-
-        // Recursively build right subtree
-        rootNode.right = buildSubtree(preorderTraversal, preorderStartIndex + leftSubtreeSize + 1, preorderEndIndex, rootIndexInInorder + 1,
-                inorderEndIndex, inorderIndexByValue);
+        if (mid < right) {
+            rootNode.right = buildTreeHelper(preorder, inorderMap, root + mid - left + 1, mid + 1, right); // root + 1 + leftSubTreeSize
+        }
 
         return rootNode;
     }
@@ -53,7 +42,7 @@ public class ConstructBTFromPreAndInorderTraversal {
     public static void main(String[] args) {
 
         int[] preorder = {3, 9, 20, 15, 7};
-        int[] inorder  = {9, 3, 15, 20, 7};
+        int[] inorder = {9, 3, 15, 20, 7};
 
         ConstructBTFromPreAndInorderTraversal solution = new ConstructBTFromPreAndInorderTraversal();
         TreeNode root = solution.buildTree(preorder, inorder);
