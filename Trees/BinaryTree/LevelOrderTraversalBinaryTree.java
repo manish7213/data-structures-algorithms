@@ -1,27 +1,26 @@
-package Trees;
+package Trees.BinaryTree;
+
+import Trees.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 /**
  * @author manishkumar
  *
- * <a href="https://www.geeksforgeeks.org/problems/left-view-of-binary-tree/1">LeftView</a>
+ * <a href="https://leetcode.com/problems/binary-tree-level-order-traversal/description/">LevelOrderTraversalBinaryTree</a>
  */
-public class LeftView {
-    public ArrayList<Integer> leftView(TreeNode root) {
-        // code here
-        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
-        bfs(root, res);
-        ArrayList<Integer> list = new ArrayList<>();
-        for (ArrayList<Integer> l : res) {
-            list.add(l.get(0));
-        }
+public class LevelOrderTraversalBinaryTree {
+
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> list = new ArrayList<>();
+        bfs(root, list);
         return list;
     }
 
-    private void bfs(TreeNode node, ArrayList<ArrayList<Integer>> res) {
+    private void bfs(TreeNode node, List<List<Integer>> res) {
         if (node == null) {
             return;
         }
@@ -32,7 +31,7 @@ public class LeftView {
 
         while (!q.isEmpty()) {
             int size = q.size();
-            ArrayList<Integer> level = new ArrayList<>();
+            List<Integer> level = new ArrayList<>();
             for (int i = 0; i < size; i++) {
                 TreeNode temp = q.poll();
                 level.add(temp.val);
@@ -47,4 +46,5 @@ public class LeftView {
             res.add(level);
         }
     }
+
 }

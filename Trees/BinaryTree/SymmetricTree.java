@@ -1,4 +1,6 @@
-package Trees;
+package Trees.BinaryTree;
+
+import Trees.TreeNode;
 
 /**
  * @author manishkumar

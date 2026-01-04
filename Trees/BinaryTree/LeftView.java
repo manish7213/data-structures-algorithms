@@ -1,8 +1,9 @@
-package Trees;
+package Trees.BinaryTree;
+
+import Trees.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 /**
@@ -10,14 +11,14 @@ import java.util.Queue;
  *
  * <a href="https://www.geeksforgeeks.org/problems/left-view-of-binary-tree/1">LeftView</a>
  */
-public class RightView {
-    public List<Integer> rightSideView(TreeNode root) {
+public class LeftView {
+    public ArrayList<Integer> leftView(TreeNode root) {
         // code here
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
         bfs(root, res);
         ArrayList<Integer> list = new ArrayList<>();
         for (ArrayList<Integer> l : res) {
-            list.add(l.get(l.size() - 1));
+            list.add(l.get(0));
         }
         return list;
     }
