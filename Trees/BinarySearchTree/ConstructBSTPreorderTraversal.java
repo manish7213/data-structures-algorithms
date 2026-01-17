@@ -40,4 +40,28 @@ public class ConstructBSTPreorderTraversal {
 
         return root;
     }
+
+
+    /**
+     *
+     * This is optimized in O(n).
+     */
+    public TreeNode bstFromPreorderOptimized(int[] preorder) {
+        return build(preorder, 0, Integer.MAX_VALUE);
+    }
+
+    private TreeNode build(int[] preorder, int left, int right) {
+
+        if(preIndex == preorder.length || preorder[preIndex] > right || preorder[preIndex] < left) {
+            return null;
+        }
+
+        TreeNode root = new TreeNode(preorder[preIndex++]);
+
+        root.left = build(preorder, left, root.val - 1);
+
+        root.right = build(preorder, root.val + 1, right);
+
+        return root;
+    }
 }
