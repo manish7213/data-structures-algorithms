@@ -1,5 +1,7 @@
 package DP.Pattern_01_ZeroOneKnapsack;
 
+import java.util.Arrays;
+
 /**
  * @author manishkumar
  * <br>
@@ -28,11 +30,43 @@ public class Q1_ZeroOneKnapsack {
         return dp[n][W];
     }
 
+    static int knapsackRecursive(int W, int[] val, int[] wt) {
+        int n = val.length;
+        int[][] dp = new int[n + 1][W + 1];
+
+        for (int i = 0; i < dp.length; i++) {
+            Arrays.fill(dp[i], -1);
+        }
+
+        return knapsackHelper(W, val, wt, n,dp);
+    }
+
+    private static int knapsackHelper(int W, int[] val, int[] wt, int n, int[][] dp) {
+
+        if (W == 0 || n == 0) {
+            return 0;
+        }
+
+        if (dp[n][W] != -1) {
+            return dp[n][W];
+        }
+
+        int notTaken = knapsackHelper(W, val, wt, n - 1, dp);
+        if (wt[n - 1] <= W) {
+            int taken = val[n-1] + knapsackHelper(W - wt[n - 1], val, wt, n - 1, dp);
+            dp[n][W] = Math.max(taken, notTaken);
+        } else {
+            dp[n][W] = notTaken;
+        }
+
+        return dp[n][W];
+    }
+
     public static void main(String[] args) {
         int[] val = {1, 2, 3};
         int[] wt = {4, 5, 1};
         int W = 4;
 
-        System.out.println(knapsack(W, val, wt));
+        System.out.println(knapsackRecursive(W, val, wt));
     }
 }
