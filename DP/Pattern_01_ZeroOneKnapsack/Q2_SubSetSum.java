@@ -1,5 +1,7 @@
 package DP.Pattern_01_ZeroOneKnapsack;
 
+import java.util.Arrays;
+
 /**
  * @author manishkumar
  *
@@ -68,6 +70,59 @@ public class Q2_SubSetSum {
         }
 
         return dp[n][sum];
+    }
+
+    /**
+     * More optimized
+     */
+    static Boolean isSubsetSumSpaceOptimized(int arr[], int sum) {
+
+        int n = arr.length;
+        int[][] dp = new int[n + 1][sum + 1];
+
+        for(int i = 0 ; i < dp.length;i++) {
+            Arrays.fill(dp[i], -1);
+        }
+
+
+        return subSetSumHelper(arr, sum, n, dp);
+
+    }
+
+    /**
+     * More optimized
+     */
+    static Boolean subSetSumHelper(int[] arr, int sum, int n, int[][] dp) {
+
+        if (sum == 0) {
+            return true;
+        }
+        if (n == 0) {
+            return false;
+        }
+
+        if (dp[n][sum] != -1) {
+            return dp[n][sum] != 0;
+        }
+
+        Boolean notTaken = subSetSumHelper(arr, sum, n - 1, dp);
+
+        if (arr[n - 1] <= sum) {
+            boolean taken = subSetSumHelper(arr, sum - arr[n - 1], n - 1, dp) || subSetSumHelper(arr, sum, n - 1, dp);
+            if(taken) {
+                dp[n][sum] = 1;
+            } else {
+                dp[n][sum] = 0;
+            }
+        } else {
+            if(notTaken) {
+                dp[n][sum] = 1;
+            } else {
+                dp[n][sum] = 0;
+            }
+        }
+
+        return dp[n][sum] != 0;
     }
 
     public static void main(String[] args) {
