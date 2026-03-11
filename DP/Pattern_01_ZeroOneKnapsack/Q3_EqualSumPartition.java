@@ -1,5 +1,7 @@
 package DP.Pattern_01_ZeroOneKnapsack;
 
+import java.util.Arrays;
+
 /**
  * @author manishkumar
  * <p>
@@ -41,6 +43,57 @@ public class Q3_EqualSumPartition {
             }
         }
         return dp[n][target];
+    }
+
+    public boolean canPartitionRecursive(int[] nums) {
+        int n = nums.length;
+        int sum = Arrays.stream(nums).sum();
+        if (sum % 2 != 0) {
+            return false;
+        }
+
+        int reqSum = sum / 2;
+        int[][] dp = new int[n + 1][sum + 1];
+
+        for (int i = 0; i < dp.length; i++) {
+            Arrays.fill(dp[i], -1);
+        }
+
+        return canPartitionHelper(nums, reqSum, n, dp);
+    }
+
+    static Boolean canPartitionHelper(int[] arr, int sum, int n, int[][] dp) {
+
+        if (sum == 0) {
+            return true;
+        }
+        if (n == 0) {
+            return false;
+        }
+
+        if (dp[n][sum] != -1) {
+            return dp[n][sum] != 0;
+        }
+
+        Boolean notTaken = canPartitionHelper(arr, sum, n - 1, dp);
+
+        if (arr[n - 1] <= sum) {
+            boolean taken = canPartitionHelper(arr, sum - arr[n - 1], n - 1, dp)
+                    || canPartitionHelper(arr, sum, n - 1, dp);
+            if (taken) {
+                dp[n][sum] = 1;
+            } else {
+                dp[n][sum] = 0;
+            }
+        } else {
+            if (notTaken) {
+                dp[n][sum] = 1;
+            } else {
+                dp[n][sum] = 0;
+            }
+        }
+
+        return dp[n][sum] != 0;
     }
 
     public static void main(String[] args) {
