@@ -36,6 +36,40 @@ public class Q2_SubSetSum {
         return dp[n][sum];
     }
 
+    static Boolean isSubsetSumRecursive(int arr[], int sum) {
+
+        int n = arr.length;
+        Boolean[][] dp = new Boolean[n + 1][sum + 1];
+
+        return subSetSumHelper(arr, sum, n, dp);
+
+    }
+
+    static Boolean subSetSumHelper(int[] arr, int sum, int n, Boolean[][] dp) {
+
+        if (sum == 0) {
+            return true;
+        }
+        if (n == 0) {
+            return false;
+        }
+
+        if (dp[n][sum] != null) {
+            return dp[n][sum];
+        }
+
+        Boolean notTaken = subSetSumHelper(arr, sum, n - 1, dp);
+
+        // This if-else condition can be removed by adding one more initial condition to check sum < 0 because we are handling that in this if-else.
+        if (arr[n - 1] <= sum) {
+            dp[n][sum] = subSetSumHelper(arr, sum - arr[n - 1], n - 1, dp) || subSetSumHelper(arr, sum, n - 1, dp);
+        } else {
+            dp[n][sum] = notTaken;
+        }
+
+        return dp[n][sum];
+    }
+
     public static void main(String[] args) {
         System.out.println(isSubsetSum(new int[]{3, 34, 4, 12, 5, 2}, 9));    // true (4+5)
         System.out.println(isSubsetSum(new int[]{3, 34, 4, 12, 5, 2}, 30));   // false (34-4)
