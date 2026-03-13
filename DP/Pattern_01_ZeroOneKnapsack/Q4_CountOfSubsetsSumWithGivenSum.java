@@ -1,5 +1,7 @@
 package DP.Pattern_01_ZeroOneKnapsack;
 
+import java.util.Arrays;
+
 /**
  * @author manishkumar
  * <p>
@@ -33,6 +35,44 @@ public class Q4_CountOfSubsetsSumWithGivenSum {
                 }
             }
         }
+        return dp[n][target];
+    }
+
+
+    public int perfectSumOptimized(int[] nums, int target) {
+        int n = nums.length;
+        int[][] dp = new int[n+1][target+1];
+        for(int i = 0 ; i < dp.length ;i++) {
+            Arrays.fill(dp[i],-1);
+        }
+        return perfectSumHelper(nums,target,n,dp);
+    }
+
+    private int perfectSumHelper(int[] nums, int target, int n, int[][] dp) {
+
+        if(target == 0) {
+            if(n == 0) {
+                return 1;
+            }
+        }
+
+        if(n == 0) {
+            return 0;
+        }
+
+        if(target < 0) {
+            return 0;
+        }
+
+        if(dp[n][target] != -1) {
+            return dp[n][target];
+        }
+
+        int taken = perfectSumHelper(nums,target-nums[n-1],n-1,dp);
+        int notTaken = perfectSumHelper(nums,target,n-1,dp);
+
+        dp[n][target] = taken + notTaken;
+
         return dp[n][target];
     }
 
