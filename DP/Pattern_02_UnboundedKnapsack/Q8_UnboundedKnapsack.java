@@ -1,5 +1,7 @@
 package DP.Pattern_02_UnboundedKnapsack;
 
+import java.util.Arrays;
+
 /**
  * @author manishkumar
  * <br>
@@ -34,6 +36,42 @@ public class Q8_UnboundedKnapsack {
                 }
             }
         }
+        return dp[n][capacity];
+    }
+
+    public int knapSackOptimized(int val[], int wt[], int capacity) {
+        // code here
+        int n = val.length;
+        int[][] dp = new int[n + 1][capacity + 1];
+
+        for(int i = 0 ; i < dp.length;i++) {
+            Arrays.fill(dp[i], -1);
+        }
+
+        return helper(val,wt,capacity,n,dp);
+    }
+
+    private int helper(int[] val, int[] wt, int capacity, int n, int[][] dp) {
+
+        if(capacity == 0) {
+            return 0;
+        }
+
+        if(n == 0) {
+            return 0;
+        }
+
+        if(dp[n][capacity] != -1) {
+            return dp[n][capacity];
+        }
+
+        if(wt[n-1] <= capacity) {
+            dp[n][capacity]  = Math.max(val[n-1] + helper(val, wt, capacity - wt[n-1], n, dp),
+                    helper(val,wt,capacity,n-1,dp));
+        } else {
+            dp[n][capacity] = helper(val,wt,capacity,n-1,dp);
+        }
+
         return dp[n][capacity];
     }
 
