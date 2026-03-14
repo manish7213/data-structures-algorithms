@@ -1,5 +1,6 @@
 package DP.Pattern_02_UnboundedKnapsack;
 
+import java.util.Arrays;
 import java.util.stream.IntStream;
 
 /**
@@ -39,6 +40,44 @@ public class Q9_RodCuttingProblem {
         }
 
         return dp[n][n];
+    }
+
+    public int cutRodHelper(int[] price) {
+        int n = price.length;
+        int[] wt = new int[n];
+        for(int i = 0 ; i < n ;i++) {
+            wt[i] = i+1;
+        }
+        int capacity = n;
+        int[][] dp = new int[n + 1][capacity + 1];
+        for(int i = 0 ; i < dp.length;i++) {
+            Arrays.fill(dp[i], -1);
+        }
+
+        return helper(price,wt,capacity,n,dp);
+    }
+
+    private int helper(int[] price, int[] wt, int capacity, int n, int[][] dp) {
+        if(n == 0) {
+            return 0;
+        }
+
+        if(capacity == 0) {
+            return 0;
+        }
+
+        if(dp[n][capacity] != -1) {
+            return dp[n][capacity];
+        }
+
+        if(wt[n-1] <= capacity) {
+            dp[n][capacity] = Math.max(price[n-1] + helper(price, wt, capacity - wt[n-1], n, dp),
+                    helper(price, wt, capacity, n -1 , dp));
+        } else {
+            dp[n][capacity] = helper(price, wt, capacity, n -1 , dp);
+        }
+
+        return dp[n][capacity];
     }
 
     public static void main(String[] args) {

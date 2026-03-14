@@ -1,5 +1,7 @@
 package DP.Pattern_02_UnboundedKnapsack;
 
+import java.util.Arrays;
+
 /**
  * @author manishkumar
  * <br>
@@ -34,7 +36,38 @@ public class Q10_CoinChange_MaxNoOfWays {
         }
         return dp[n][amount];
     }
+    public int changeHelper(int amount, int[] coins) {
+        int n = coins.length;
+        int[][] dp = new int[n + 1][amount + 1];
 
+        for (int i = 0; i < dp.length; i++) {
+            Arrays.fill(dp[i], -1);
+        }
+
+        return helper(amount, coins, n, dp);
+    }
+
+    private int helper(int amount, int[] coins, int n, int[][] dp) {
+        if (amount == 0) {
+            return 1;
+        }
+
+        if (n == 0) {
+            return 0;
+        }
+
+        if (dp[n][amount] != -1) {
+            return dp[n][amount];
+        }
+
+        if (coins[n - 1] <= amount) {
+            dp[n][amount] = helper(amount - coins[n - 1], coins, n, dp) + helper(amount, coins, n - 1, dp);
+        } else {
+            dp[n][amount] = helper(amount, coins, n - 1, dp);
+        }
+
+        return dp[n][amount];
+    }
     public static void main(String[] args) {
         Q10_CoinChange_MaxNoOfWays obj = new Q10_CoinChange_MaxNoOfWays();
 
