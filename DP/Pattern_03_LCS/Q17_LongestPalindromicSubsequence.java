@@ -6,6 +6,8 @@ package DP.Pattern_03_LCS;
  * <a href="https://www.youtube.com/watch?v=wuOOOATz_IA&list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go&index=26">YouTube: LongestPalindromicSubsequence {</a>
  * <p>
  * <a href="https://www.geeksforgeeks.org/problems/longest-palindromic-subsequence-1612327878/1">GFG: LongestPalindromicSubsequence</a>
+
+ * <a href="https://leetcode.com/problems/longest-palindromic-subsequence/description/">Leetcode: LongestPalindromicSubsequence</a>
  * <p>
  * Hint :
  * {
