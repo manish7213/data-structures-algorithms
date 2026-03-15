@@ -1,5 +1,7 @@
 package DP.Pattern_03_LCS;
 
+import java.util.Arrays;
+
 /**
  * @author manishkumar
  * <br>
@@ -46,6 +48,44 @@ public class Q15_ShortestCommonSuperSequence {
                 }
             }
         }
+        return dp[m][n];
+    }
+
+    public static int minSuperSeqRecursive(String s1, String s2) {
+
+        int m = s1.length();
+        int n = s2.length();
+
+        int[][] dp = new int[m+1][n+1];
+
+        for(int i =0 ; i < dp.length;i++) {
+            Arrays.fill(dp[i], -1);
+        }
+
+        int lcs = lcsHelperRecursive(s1,s2,m,n,dp);
+
+        return m + n - lcs;
+    }
+
+    private static int lcsHelperRecursive(String s1, String s2, int m , int n , int[][] dp) {
+
+        if(m == 0 || n == 0) {
+            return 0;
+        }
+
+        if(dp[m][n] != -1) {
+            return dp[m][n];
+        }
+
+        if(s1.charAt(m-1) == s2.charAt(n-1)) {
+
+            dp[m][n] = 1 + lcsHelperRecursive(s1,s2,m-1,n-1,dp);
+
+        } else {
+
+            dp[m][n] = Math.max(lcsHelperRecursive(s1,s2,m-1,n,dp), lcsHelperRecursive(s1,s2,m,n-1,dp));
+        }
+
         return dp[m][n];
     }
 

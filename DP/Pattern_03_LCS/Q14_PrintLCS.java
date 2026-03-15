@@ -1,5 +1,7 @@
 package DP.Pattern_03_LCS;
 
+import java.util.Arrays;
+
 /**
  * @author manishkumar
  * <br>
@@ -68,6 +70,54 @@ public class Q14_PrintLCS {
 
     }
 
+
+    public String printLCSRecursive(String s1, String s2) {
+        int m = s1.length();
+        int n = s2.length();
+        int[][] dp = new int[m + 1][n + 1];
+        for (int i = 0; i < dp.length; i++) {
+            Arrays.fill(dp[i], -1);
+        }
+
+        int lcs = lcsRecursiveHelper(s1, s2, m, n, dp);
+
+        StringBuilder sb = new StringBuilder();
+        buildLCSString(s1, s2, m, n, dp, sb);
+        return sb.reverse().toString();
+    }
+
+    private void buildLCSString(String s1, String s2, int m, int n, int[][] dp, StringBuilder sb) {
+        if (m == 0 || n == 0) {
+            return;
+        }
+
+        if (s1.charAt(m - 1) == s2.charAt(n - 1)) {
+            sb.append(s1.charAt(m - 1));
+            buildLCSString(s1, s2, m - 1, n - 1, dp, sb);
+        } else if (dp[m - 1][n] > dp[m][n - 1]) {
+            buildLCSString(s1, s2, m - 1, n, dp, sb);
+        } else buildLCSString(s1, s2, m, n - 1, dp, sb);
+    }
+
+    private int lcsRecursiveHelper(String s1, String s2, int m, int n, int[][] dp) {
+        if (m == 0 || n == 0) {
+            return 0;
+        }
+
+        if (dp[m][n] != -1) {
+            return dp[m][n];
+        }
+
+        if (s1.charAt(m - 1) == s2.charAt(n - 1)) {
+            dp[m][n] = 1 + lcsRecursiveHelper(s1, s2, m - 1, n - 1, dp);
+        } else {
+            dp[m][n] = Math.max(lcsRecursiveHelper(s1, s2, m - 1, n, dp), lcsRecursiveHelper(s1, s2, m, n - 1, dp));
+        }
+
+        return dp[m][n];
+    }
+
+
     public static void main(String[] args) {
         Q14_PrintLCS obj = new Q14_PrintLCS();
 
@@ -83,5 +133,10 @@ public class Q14_PrintLCS {
         System.out.println("LCS(abaaa, baabaca) = " + obj.printLCS(s1, s2));   // Expected: abaa
         System.out.println("LCS(abcde, ace) = " + obj.printLCS(a1, a2));       // Expected: ace
         System.out.println("LCS(AGGTAB, GXTXAYB) = " + obj.printLCS(b1, b2));  // Expected: GTAB
+        System.out.println("*********************************");
+        //RECURSIVE TEST
+        System.out.println("Recursive LCS(abaaa, baabaca) = " + obj.printLCSRecursive(s1, s2));   // Expected: abaa
+        System.out.println("Recursive LCS(abcde, ace) = " + obj.printLCSRecursive(a1, a2));       // Expected: ace
+        System.out.println("Recursive LCS(AGGTAB, GXTXAYB) = " + obj.printLCSRecursive(b1, b2));  // Expected: GTAB
     }
 }
