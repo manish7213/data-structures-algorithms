@@ -1,5 +1,7 @@
 package DP.Pattern_03_LCS;
 
+import java.util.Arrays;
+
 /**
  * @author manishkumar
  * <br>
@@ -49,6 +51,66 @@ public class Q21_SequencePatternMatching {
         }
 
         return dp[m][n];
+    }
+
+    public boolean isSubsequenceRecursive(String s, String t) {
+        int m = s.length();
+        int n = t.length();
+
+        int[][] dp = new int[m + 1][n + 1];
+
+        for (int i = 0; i < dp.length; i++) {
+            Arrays.fill(dp[i], -1);
+        }
+
+        int lcs = lcsHelper(s, t, m, n, dp);
+
+        return m == lcs;
+
+    }
+
+    private int lcsHelper(String text1, String text2, int m, int n, int[][] dp) {
+
+        if (m == 0 || n == 0) {
+            return 0;
+        }
+
+        if (dp[m][n] != -1) {
+            return dp[m][n];
+        }
+
+        if (text1.charAt(m - 1) == text2.charAt(n - 1)) {
+            dp[m][n] = 1 + lcsHelper(text1, text2, m - 1, n - 1, dp);
+        } else {
+            dp[m][n] = Math.max(lcsHelper(text1, text2, m - 1, n, dp), lcsHelper(text1, text2, m, n - 1, dp));
+        }
+
+        return dp[m][n];
+    }
+
+    /**
+     * This is a non dp solution
+     */
+
+    public boolean isSubsequenceNONDP(String s, String t) {
+        int m = s.length();
+        int n = t.length();
+        int count = 0;
+        int index = -1;
+        for (int i = 0; i < m; i++) {
+            int j = index + 1;
+            for (; j < n; j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    count++;
+                    index = j;
+                    break;
+                }
+            }
+            if (j == n) {
+                break;
+            }
+        }
+        return m == count;
     }
 
     public static void main(String[] args) {
