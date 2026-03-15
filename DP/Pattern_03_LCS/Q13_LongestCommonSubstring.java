@@ -1,4 +1,7 @@
 package DP.Pattern_03_LCS;
+
+import java.util.Arrays;
+
 /**
  * @author manishkumar
  * <br>
@@ -41,6 +44,46 @@ public class Q13_LongestCommonSubstring {
         }
 
         return maxLen;
+    }
+
+    int max = 0;
+    public int longCommSubstrRecursive(String s1, String s2) {
+        max = 0;
+        int m = s1.length();
+        int n = s2.length();
+
+        int[][] dp = new int[m + 1][n + 1];
+
+        for(int i = 0 ; i < dp.length;i++) {
+            Arrays.fill(dp[i], -1);
+        }
+
+        int t = helper(s1,s2,m,n,dp);
+        return max;
+
+    }
+
+    private int helper(String s1, String s2, int m, int n, int[][] dp) {
+
+        if(m == 0 || n == 0) {
+            return 0;
+        }
+
+        if(dp[m][n] != -1) {
+            return dp[m][n];
+        }
+
+        if(s1.charAt(m-1) == s2.charAt(n-1)) {
+            dp[m][n] = 1 + helper(s1,s2,m-1,n-1,dp);
+            max = Math.max(max, dp[m][n]);
+        } else {
+            dp[m][n] = 0;
+        }
+
+        helper(s1, s2, m-1, n, dp);
+        helper(s1, s2, m, n-1, dp);
+
+        return dp[m][n];
     }
 
     public static void main(String[] args) {
