@@ -9,7 +9,7 @@ import java.util.*;
  *
  * <a href="https://www.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1">BottomView</a>
  */
-public class BottomView {
+public class Q6_BottomView {
 
     public ArrayList<Integer> bottomView(TreeNode root) {
         ArrayList<Integer> res = new ArrayList<>();

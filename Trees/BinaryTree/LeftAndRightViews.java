@@ -12,8 +12,8 @@ public class LeftAndRightViews {
 
     public static List<Integer> leftView(TreeNode root) {
         List<Integer> res = new ArrayList<>();
-//        dfsLeft(root, 0, res);
-        dfsRight(root, 0, res);
+        dfsLeft(root, 0, res);
+//        dfsRight(root, 0, res);
         return res;
     }
 
