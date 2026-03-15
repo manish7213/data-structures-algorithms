@@ -9,7 +9,7 @@ import java.util.*;
  *
  * <a href="https://www.geeksforgeeks.org/problems/top-view-of-binary-tree/1">TopView</a>
  */
-public class TopView {
+public class Q5_TopView {
 
     public List<Integer> topView(TreeNode root) {
         // code here

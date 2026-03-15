@@ -10,35 +10,28 @@ import java.util.Queue;
 /**
  * @author manishkumar
  *
- * <a href="https://www.geeksforgeeks.org/problems/left-view-of-binary-tree/1">LeftView</a>
+ * <a href="https://leetcode.com/problems/binary-tree-right-side-view/">Right View</a>
  */
-public class RightView {
+public class Q4_RightView {
     public List<Integer> rightSideView(TreeNode root) {
-        // code here
-        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
-        bfs(root, res);
-        ArrayList<Integer> list = new ArrayList<>();
-        for (ArrayList<Integer> l : res) {
-            list.add(l.get(l.size() - 1));
-        }
-        return list;
-    }
-
-    private void bfs(TreeNode node, ArrayList<ArrayList<Integer>> res) {
-        if (node == null) {
-            return;
+        List<Integer> res = new ArrayList<>();
+        if (root == null) {
+            return res;
         }
 
         Queue<TreeNode> q = new LinkedList<>();
 
-        q.add(node);
+        q.add(root);
 
         while (!q.isEmpty()) {
+
             int size = q.size();
-            ArrayList<Integer> level = new ArrayList<>();
+
             for (int i = 0; i < size; i++) {
                 TreeNode temp = q.poll();
-                level.add(temp.val);
+                if (i == size - 1) {
+                    res.add(temp.val);
+                }
                 if (temp.left != null) {
                     q.add(temp.left);
                 }
@@ -47,7 +40,9 @@ public class RightView {
                     q.add(temp.right);
                 }
             }
-            res.add(level);
         }
+
+        return res;
+
     }
 }

@@ -12,7 +12,7 @@ import java.util.List;
  *
  * left -> root -> right
  */
-public class InorderTraversalRecursive {
+public class Q1_InorderTraversalRecursive {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         dfs(root,list);
