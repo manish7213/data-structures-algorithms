@@ -7,7 +7,7 @@ import Trees.TreeNode;
  *
  * <a href="https://leetcode.com/problems/subtree-of-another-tree/">SubTreeOfTree</a>
  */
-public class SubTreeOfTree {
+public class Q13_SubTreeOfTree {
     public boolean isSubtree(TreeNode root, TreeNode subRoot) {
         if (root == null) return false;
 
