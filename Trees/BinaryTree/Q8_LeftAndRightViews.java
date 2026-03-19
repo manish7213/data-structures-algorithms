@@ -8,7 +8,7 @@ import java.util.*;
  * @author manishkumar
  *
  */
-public class LeftAndRightViews {
+public class Q8_LeftAndRightViews {
 
     public static List<Integer> leftView(TreeNode root) {
         List<Integer> res = new ArrayList<>();

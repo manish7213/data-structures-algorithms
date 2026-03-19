@@ -30,7 +30,7 @@ public class Q5_TopView {
             int size = q.size();
             for (int i = 0; i < size; i++) {
                 Pair p1 = q.poll();
-                map.putIfAbsent(p1.pos, p1.node.val);
+                map.putIfAbsent(p1.pos, p1.node.val); // Use only put for bottom view
                 if (p1.node.left != null) {
                     q.add(new Pair(p1.node.left, p1.pos - 1));
                 }

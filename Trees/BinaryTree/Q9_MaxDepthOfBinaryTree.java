@@ -7,7 +7,7 @@ import Trees.TreeNode;
  *
  * <a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/description/">MaxDepthOfBinaryTree</a>
  */
-public class MaxDepthOfBinaryTree {
+public class Q9_MaxDepthOfBinaryTree {
     public int maxDepth(TreeNode root) {
 
         if (root == null) return 0;
@@ -16,5 +16,8 @@ public class MaxDepthOfBinaryTree {
         int right = maxDepth(root.right);
 
         return 1 + Math.max(left, right);
+
+
+//        return root == null ? 0 : 1 + Math.max(maxDepth(root.left),maxDepth(root.right));
     }
 }

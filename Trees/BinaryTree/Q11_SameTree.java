@@ -7,8 +7,9 @@ import Trees.TreeNode;
  *
  * <a href="https://leetcode.com/problems/same-tree/description/">SameTree</a>
  */
-public class SameTree {
+public class Q11_SameTree {
     public boolean isSameTree(TreeNode p, TreeNode q) {
+
         if (p == null && q == null) {
             return true;
         }
