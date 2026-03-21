@@ -10,8 +10,9 @@ import java.util.Map;
  *
  * <a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/">ConstructBTFromPreAndInorderTraversal</a>
  */
-public class ConstructBTFromPreAndInorderTraversal {
+public class Q20_ConstructBTFromPreAndInorderTraversal {
     private int preOrderRootIndex;
+
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         preOrderRootIndex = 0;
         Map<Integer, Integer> inorderMap = new HashMap<>();
@@ -22,9 +23,9 @@ public class ConstructBTFromPreAndInorderTraversal {
         return buildTreeHelper(preorder, inorderMap, 0, inorder.length - 1);
     }
 
-    private TreeNode buildTreeHelper(int[] preorder, Map<Integer,Integer> inorderMap, int left, int right) {
+    private TreeNode buildTreeHelper(int[] preorder, Map<Integer, Integer> inorderMap, int left, int right) {
 
-        if(left > right) {
+        if (left > right) {
             return null;
         }
         TreeNode rootNode = new TreeNode(preorder[preOrderRootIndex]);
@@ -32,7 +33,7 @@ public class ConstructBTFromPreAndInorderTraversal {
 
         preOrderRootIndex++;
 
-        rootNode.left = buildTreeHelper(preorder, inorderMap,  left, rootIndex - 1);
+        rootNode.left = buildTreeHelper(preorder, inorderMap, left, rootIndex - 1);
 
         rootNode.right = buildTreeHelper(preorder, inorderMap, rootIndex + 1, right);
 
@@ -45,7 +46,7 @@ public class ConstructBTFromPreAndInorderTraversal {
         int[] preorder = {3, 9, 20, 15, 7};
         int[] inorder = {9, 3, 15, 20, 7};
 
-        ConstructBTFromPreAndInorderTraversal solution = new ConstructBTFromPreAndInorderTraversal();
+        Q20_ConstructBTFromPreAndInorderTraversal solution = new Q20_ConstructBTFromPreAndInorderTraversal();
         TreeNode root = solution.buildTree(preorder, inorder);
 
         System.out.println("\nPreorder traversal of constructed tree:");
