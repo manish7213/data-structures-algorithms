@@ -10,7 +10,7 @@ import java.util.List;
  *
  * <a href="https://leetcode.com/problems/binary-tree-paths/">BinaryTreePaths</a>
  */
-public class BinaryTreePaths {
+public class Q18_BinaryTreePaths {
     public List<String> binaryTreePaths(TreeNode root) {
         if (root == null) {
             return List.of();
