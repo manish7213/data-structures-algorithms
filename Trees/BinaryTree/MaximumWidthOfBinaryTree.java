@@ -10,6 +10,7 @@ import java.util.Queue;
  *
  * <a href="https://www.youtube.com/watch?v=ZbybYvcVLks&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&index=30">MaximumWidthOfBinaryTree</a>
  *
+ * <a href="https://leetcode.com/problems/maximum-width-of-binary-tree/">MaximumWidthOfBinaryTree</a>
  */
 public class MaximumWidthOfBinaryTree {
     static class Pair {
