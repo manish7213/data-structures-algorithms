@@ -7,20 +7,20 @@ import Trees.TreeNode;
  *
  * <a href="https://leetcode.com/problems/search-in-a-binary-search-tree/description/">SearchInBST</a>
  */
-public class SearchInBST {
+public class Q1_SearchInBST {
 
     public TreeNode searchBSTRecursive(TreeNode root, int val) {
         if (root == null) {
             return null;
         }
-        if (root.val == val) {
-            return root;
-        }
 
         if (val < root.val) {
             return searchBSTRecursive(root.left, val);
-        } else {
+        } else if (val > root.val) {
             return searchBSTRecursive(root.right, val);
+        } else {
+            return root;
+
         }
     }
 
