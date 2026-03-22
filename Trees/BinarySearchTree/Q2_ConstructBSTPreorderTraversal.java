@@ -11,7 +11,7 @@ import java.util.Map;
  *
  * <a href="https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/">ConstructBSTPreorderTraversal</a>
  */
-public class ConstructBSTPreorderTraversal {
+public class Q2_ConstructBSTPreorderTraversal {
 
     int preIndex = 0;
 
