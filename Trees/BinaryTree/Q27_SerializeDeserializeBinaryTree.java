@@ -10,7 +10,7 @@ import java.util.Queue;
  *
  * <a href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/">SerializeDeserializeBinaryTree</a>
  */
-public class SerializeDeserializeBinaryTree {
+public class Q27_SerializeDeserializeBinaryTree {
 
     public String serialize(TreeNode root) {
 

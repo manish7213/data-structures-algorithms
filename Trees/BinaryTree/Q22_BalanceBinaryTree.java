@@ -7,7 +7,7 @@ import Trees.TreeNode;
  *
  * <a href="https://leetcode.com/problems/balanced-binary-tree/description/">BalanceBinaryTree</a>
  */
-public class BalanceBinaryTree {
+public class Q22_BalanceBinaryTree {
 
     public boolean isBalanced(TreeNode root) {
         if (root == null) {

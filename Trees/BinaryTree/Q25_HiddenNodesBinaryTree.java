@@ -18,7 +18,7 @@ import java.util.Map;
  3.  DFS again to list nodes not in left/right sets.
 
  */
-public class HiddenNodesBinaryTree {
+public class Q25_HiddenNodesBinaryTree {
 
     public static List<Integer> hiddenNodes(TreeNode root) {
         if (root == null) return List.of();

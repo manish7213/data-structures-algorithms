@@ -7,7 +7,7 @@ import Trees.TreeNode;
  *
  * <a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/">FlattenBinaryTreeToLinkedList</a>
  */
-public class FlattenBinaryTreeToLinkedList {
+public class Q23_FlattenBinaryTreeToLinkedList {
 
     private TreeNode prev = null;
 

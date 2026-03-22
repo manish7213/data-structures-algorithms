@@ -12,7 +12,7 @@ import java.util.Queue;
  *
  * <a href="https://leetcode.com/problems/maximum-width-of-binary-tree/">MaximumWidthOfBinaryTree</a>
  */
-public class MaximumWidthOfBinaryTree {
+public class Q26_MaximumWidthOfBinaryTree {
     static class Pair {
         TreeNode node;
         long idx;
