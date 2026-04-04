@@ -7,7 +7,7 @@ import Trees.TreeNode;
  *
  * <a href="https://leetcode.com/problems/delete-node-in-a-bst/description/">DeleteANodeInBST</a>
  */
-public class DeleteANodeInBST {
+public class Q14_DeleteANodeInBST {
 
     public TreeNode deleteNode(TreeNode root, int key) {
         if (root == null) {

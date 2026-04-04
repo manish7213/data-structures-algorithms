@@ -7,7 +7,7 @@ import Trees.TreeNode;
  *
  * <a href="https://www.geeksforgeeks.org/problems/floor-in-bst/1">FloorInBST</a>
  */
-public class FloorInBST {
+public class Q6_FloorInBST {
     public static int floor(TreeNode root, int x) {
 
         int floor = -1;

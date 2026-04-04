@@ -7,7 +7,7 @@ import Trees.TreeNode;
  *
  * <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/">LCAInBST</a>
  */
-public class LCAInBST {
+public class Q4_LCAInBST {
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null) {

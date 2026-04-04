@@ -9,11 +9,11 @@ import java.util.Stack;
  *
  * <a href="https://leetcode.com/problems/binary-search-tree-iterator/description/">BSTIterator</a>
  */
-public class BSTIterator {
+public class Q11_BSTIterator {
 
     private final Stack<TreeNode> stack = new Stack<>();
 
-    public BSTIterator(TreeNode root) {
+    public Q11_BSTIterator(TreeNode root) {
         pushAllToStack(root);
 
     }

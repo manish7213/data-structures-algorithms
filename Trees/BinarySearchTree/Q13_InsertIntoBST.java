@@ -7,7 +7,7 @@ import Trees.TreeNode;
  *
  * <a href="https://leetcode.com/problems/insert-into-a-binary-search-tree/description/">InsertIntoBST</a>
  */
-public class InsertIntoBST {
+public class Q13_InsertIntoBST {
 
     public TreeNode insertIntoBST(TreeNode root, int val) {
 

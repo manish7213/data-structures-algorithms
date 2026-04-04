@@ -10,7 +10,7 @@ import java.util.List;
  *
  * <a href="https://leetcode.com/problems/two-sum-iv-input-is-a-bst/">BST2Sum</a>
  */
-public class BST2Sum {
+public class Q10_BST2Sum {
     public boolean findTarget(TreeNode root, int k) {
         List<Integer> list = new ArrayList<>();
         dfs(root, list);

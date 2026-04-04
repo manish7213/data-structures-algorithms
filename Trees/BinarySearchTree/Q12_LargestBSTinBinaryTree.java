@@ -7,7 +7,7 @@ import Trees.TreeNode;
  *
  * <a href="https://www.geeksforgeeks.org/problems/largest-bst/1">LargestBSTinBinaryTree</a>
  */
-public class LargestBSTinBinaryTree {
+public class Q12_LargestBSTinBinaryTree {
 
     // Return the size of the largest sub-tree which is also a BST
     static int largestBst(TreeNode root) {

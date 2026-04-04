@@ -7,7 +7,7 @@ import Trees.TreeNode;
  *
  * <a href="https://leetcode.com/problems/recover-binary-search-tree/description/">RecoverBST</a>
  */
-public class RecoverBST {
+public class Q15_RecoverBST {
 
     private TreeNode first = null;
     private TreeNode prev = null;

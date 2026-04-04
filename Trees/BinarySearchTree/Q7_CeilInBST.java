@@ -7,7 +7,7 @@ import Trees.TreeNode;
  *
  * <a href="https://www.geeksforgeeks.org/problems/implementing-ceil-in-bst/1">CeilInBST</a>
  */
-public class CeilInBST {
+public class Q7_CeilInBST {
     int findCeil(TreeNode root, int x) {
         int ceil = -1;
         if (root == null) {

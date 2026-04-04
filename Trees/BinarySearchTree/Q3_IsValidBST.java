@@ -7,7 +7,7 @@ import Trees.TreeNode;
  *
  * <a href="https://leetcode.com/problems/validate-binary-search-tree/">IsValidBST</a>
  */
-public class IsValidBST {
+public class Q3_IsValidBST {
 
     public boolean isValidBST(TreeNode root) {
         return bstHelper(root, Long.MIN_VALUE, Long.MAX_VALUE);
