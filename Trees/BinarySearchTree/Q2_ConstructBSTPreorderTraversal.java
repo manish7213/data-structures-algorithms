@@ -13,10 +13,32 @@ import java.util.Map;
  */
 public class Q2_ConstructBSTPreorderTraversal {
 
-    int preIndex = 0;
+    int idx = 0;
+
+    /**
+     * This is optimized in O(n).
+     */
+    public TreeNode bstFromPreorderOptimized(int[] preorder) {
+        return build(preorder, 0, Integer.MAX_VALUE);
+    }
+
+    private TreeNode build(int[] preorder, int left, int right) {
+
+        if (idx == preorder.length || preorder[idx] > right || preorder[idx] < left) {
+            return null;
+        }
+
+        TreeNode root = new TreeNode(preorder[idx++]);
+
+        root.left = build(preorder, left, root.val - 1);
+
+        root.right = build(preorder, root.val + 1, right);
+
+        return root;
+    }
 
     public TreeNode bstFromPreorder(int[] preorder) {
-        preIndex = 0;
+        idx = 0;
         int[] inorder = preorder.clone();
         Arrays.sort(inorder);
         Map<Integer, Integer> map = new HashMap<>();
@@ -32,7 +54,7 @@ public class Q2_ConstructBSTPreorderTraversal {
             return null;
         }
 
-        TreeNode root = new TreeNode(preorder[preIndex++]);
+        TreeNode root = new TreeNode(preorder[idx++]);
 
         root.left = dfs(preorder, map, left, map.get(root.val) - 1);
 
@@ -42,26 +64,4 @@ public class Q2_ConstructBSTPreorderTraversal {
     }
 
 
-    /**
-     *
-     * This is optimized in O(n).
-     */
-    public TreeNode bstFromPreorderOptimized(int[] preorder) {
-        return build(preorder, 0, Integer.MAX_VALUE);
-    }
-
-    private TreeNode build(int[] preorder, int left, int right) {
-
-        if(preIndex == preorder.length || preorder[preIndex] > right || preorder[preIndex] < left) {
-            return null;
-        }
-
-        TreeNode root = new TreeNode(preorder[preIndex++]);
-
-        root.left = build(preorder, left, root.val - 1);
-
-        root.right = build(preorder, root.val + 1, right);
-
-        return root;
-    }
 }
