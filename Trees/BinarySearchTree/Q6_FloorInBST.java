@@ -8,7 +8,29 @@ import Trees.TreeNode;
  * <a href="https://www.geeksforgeeks.org/problems/floor-in-bst/1">FloorInBST</a>
  */
 public class Q6_FloorInBST {
-    public static int floor(TreeNode root, int x) {
+
+    int res = -1;
+
+    public int findFloorRecursive(TreeNode root, int x) {
+        helper(root, x);
+        return res;
+    }
+
+    private void helper(TreeNode root, int key) {
+
+        if (root == null) {
+            return;
+        }
+
+        if (root.val <= key) {
+            res = root.val;
+            helper(root.right, key);
+        } else {
+            helper(root.left, key);
+        }
+    }
+
+    public static int floorIterative(TreeNode root, int x) {
 
         int floor = -1;
 
