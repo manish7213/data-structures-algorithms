@@ -4,7 +4,7 @@ import Trees.TreeNode;
 
 import java.util.ArrayList;
 
-public class Q5_SuccessorPredecessorOfBST {
+public class Q5_InorderSuccessorPredecessorOfBST {
     TreeNode pre = null;
     TreeNode succ = null;
 
