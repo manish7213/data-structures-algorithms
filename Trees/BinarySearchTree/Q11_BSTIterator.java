@@ -24,6 +24,7 @@ public class Q11_BSTIterator {
     }
 
     public boolean hasNext() {
+        return !stack.isEmpty();
     }
 
     private void pushAllToStack(TreeNode root) {
