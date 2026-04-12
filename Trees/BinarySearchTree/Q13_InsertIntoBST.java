@@ -10,29 +10,28 @@ import Trees.TreeNode;
 public class Q13_InsertIntoBST {
 
     public TreeNode insertIntoBST(TreeNode root, int val) {
-
         if (root == null) {
             return new TreeNode(val);
         }
 
-        TreeNode curr = root;
-
+        TreeNode cur = root;
         while (true) {
+            if (val < cur.val) {
+                if (cur.left != null) {
+                    cur = cur.left;
+                } else {
+                    cur.left = new TreeNode(val);
+                    break;
+                }
 
-            if (val < curr.val) {
-                if (curr.left != null) {
-                    curr = curr.left;
-                } else {
-                    curr.left = new TreeNode(val);
-                    break;
-                }
             } else {
-                if (curr.right != null) {
-                    curr = curr.right;
+                if (cur.right != null) {
+                    cur = cur.right;
                 } else {
-                    curr.right = new TreeNode(val);
+                    cur.right = new TreeNode(val);
                     break;
                 }
+
             }
         }
 
