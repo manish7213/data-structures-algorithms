@@ -15,19 +15,15 @@ public class Q11_BSTIterator {
 
     public Q11_BSTIterator(TreeNode root) {
         pushAllToStack(root);
-
     }
 
     public int next() {
-        TreeNode top = stack.pop();
-
-        pushAllToStack(top.right);
-
-        return top.val;
+        TreeNode node = stack.pop();
+        pushAllToStack(node.right);
+        return node.val;
     }
 
     public boolean hasNext() {
-        return !stack.isEmpty();
     }
 
     private void pushAllToStack(TreeNode root) {

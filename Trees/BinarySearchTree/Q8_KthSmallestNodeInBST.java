@@ -11,22 +11,22 @@ public class Q8_KthSmallestNodeInBST {
     int count = 0;
 
     public int kthSmallest(TreeNode root, int k) {
-        inorder(root, k);
+        helper(root, k);
         return res;
     }
 
-    private void inorder(TreeNode root, int k) {
+    private void helper(TreeNode root, int k) {
         if (root == null) {
             return;
         }
-        inorder(root.left, k);
+        helper(root.left, k);
 
         count++;
         if (count == k) {
             res = root.val;
             return;
         }
-        inorder(root.right, k);
+        helper(root.right, k);
 
 
     }
